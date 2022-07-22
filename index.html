@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon Spangler</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/navigation.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@700&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+</head>
+<body class="grid_wrap">
+    <header class="navi header" id="header">
+        <div class="headerInfo" id="headerInfo">
+            <image class="personalPic" id="headerPic" src="images/Profile_Picture.jpg"></image>
+            <h1 class="headerName" id="headerName">Brandon Spangler</h1>
+        </div>
+        
+
+        <div class="menuBar" id="menuBar">
+            <div class="btn_wrap">
+                <button onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Home</button>
+                <button onClick="gsap.to(window, {duration: 0.75, scrollTo: '#projects'})">Projects</button>
+                <button onClick="gsap.to(window, {duration: 0.75, scrollTo: '#about'})">About Me</button>
+                <!-- <a href="#contact">Contact Me</a> -->
+            </div> 
+
+            <!-- <div class="menuButton" id="menuButton" onClick="menuTransform(menuBar)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div> -->
+        </div>
+    </header>
+
+    <section class="main" id="home">
+        <div class="intro">
+            <div class="welcomeSections">
+                <div class="welcomeTitleWrapper">
+                    <h1 class="welcomeTitle orange">
+                        Hello
+                    </h1>
+                    <h1 class="welcomeTitle">
+                        , I'm Brandon
+                    </h1>
+                </div>
+                <h2 class="welcomeMssg">
+                    Full-Stack Developer and student at University of Central Florida
+                </h2>
+            </div>
+        </div>
+
+        <div class="welcomeBtnWrapper">
+            <a class="resumeBtn" href="/Resume.pdf">Resume</a>
+            <a class="resumeBtn" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">LinkedIn</a>
+            <a class="resumeBtn" href="https://github.com/brandonspangler2">GitHub</a>
+        </div>
+       
+  
+
+        <div class="welcomeBtnWrapper projectBtnColumn">
+            <!-- <a class="welcomeBtn" href="">Resume</a> -->
+            <button class="projectBtn" onClick="gsap.to(window, {duration: 1.5, scrollTo: '#projects'})"><p class="projArrow">Projects</p><p class="projArrow arrowVertical">|</p><p class="projArrow arrowVertical">|</p><p class="projArrow arrowVertical">v</p></button>
+        </div>
+        
+    </section>
+
+    <section class="proj" id="projects">
+        <div>
+            <h1 class="projectTitle" id="projectTitle">Project Showcase</h1>
+        </div>
+
+        <div class="project_wrap">
+            <div class="des">
+                <h2 class="projectHeader">PhotoCode</h2>
+                <p class="projectDes">
+                    PhotoCode will be a repository-based app to let you store and share your code. 
+                    It will consist of an IOS mobile application and a desktop app. 
+                    In both apps, you can create, edit, or delete files and create new projects. 
+                    The mobile app will utilize Apple's Scan-to-Text feature for scanning code files. 
+                </p>
+            </div>
+
+            <div class="visual">       
+                <image class="photoCodeComputer" src="images/PhotoCode/desktop_usersHomepage.png"></image>
+                <image class="photoCodePhone" src="images/PhotoCode/SplashPage.png"></image> 
+            </div>
+            <div class="arrowWrap">
+                <h3 class="explore">Explore</h3>
+                <a class="arrow" href="https://github.com/ZacharyEbaugh/photoCode">
+                    <image class="arrowSize" src="images/Arrow.png"></image>
+                </a>
+            </div>
+        </div>
+
+        <div class="project_wrap">
+            <div class="des">
+                <h2 class="projectHeader">Goatify Music Player</h2>
+                <p class="projectDes">
+                    Goatify is a web-based music player that allows you to play copyright-free music. 
+                    You can create an account and create playlists to start playing music!
+                </p>
+            </div>
+
+            <div class="visual">
+                <image class="goatifyComputer" src="images/Goatify Markup.png"></image>
+            </div>
+
+            <div class="arrowWrap">
+                <h3 class="explore">Explore</h3>
+                <a class="arrow" href="https://github.com/jyrz13149/Music_Player">
+                    <image class="arrowSize" src="images/Arrow.png"></image>
+                </a>
+            </div>
+        </div>
+
+        <!-- <div class="project_wrap">
+            <div class="des">
+                <h2 class="projectHeader">Macro Tracker</h2>
+                 <h3 class="projectLanguages">HTML CSS JavaScript MySQL PHP</h3> 
+                <p class="projectDes">
+                    This IOS app will be written in Swift, allowing you to track and record 
+                    calories and macronutrients. It will enable you to have a 
+                    healthy lifestyle while not feeling like a burden. 
+                </p>
+                 <div class="projectBtnWrapper">
+                    <a class="projectButton" href="https://www.brandonspangler.com/goatify">To Goatify</a>
+                    <a class="projectButton" href="https://github.com/jyrz13149/Music_Player">Code</a>
+                </div>
+            </div>
+
+            <div class="visual">
+                <image class="goatifyComputer" src="images/Goatify Markup.png"></image>
+            </div>
+
+            <div class="arrowWrap">
+                <h3 class="explore">Explore</h3>
+                <a class="arrow" href="">
+                    <article class="arrowPosition">
+                        <div class="arm"></div>
+                        <div class="bottom"></div>
+                        <div class="top"></div>
+                    </article>
+                </a>
+            </div>
+        </div> -->
+        
+        <!-- <div class="project3">
+            <h2>Macro Tracker</h2>
+            <h3>Swift MySQL PHP</h3>
+            <p>This is an IOS based food logging app.</p>
+        </div> -->
+        <div class="projectLibraryWrapper">
+            <a class="toProjectLibraryHeader" href="projectLibrary.html">View Project Library</a>
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+        <h1 class="aboutHeader">About Me</h1>
+
+        <div class="aboutWrapper">
+            <div> 
+                <image class="profilePicture" id="" src="images/Profile_Picture.jpg"></image>
+            </div>
+
+            <p class="aboutText"> 
+                I am a computer science student from the University of Central Florida with proven teamwork and problem-solving skills. 
+                I also have a minor in mathematics, showcasing my logical and critical thinking skills. 
+                I interned at Kellogg Supply Company, implementing a Warehouse Management System. 
+                I am seeking an entry-level software engineer position to help expand my skill set. 
+                Please reach out to brandons0207@gmail.com.
+            </p>
+        </div>
+    </section>
+
+    <!-- <section class="contact" id="contact">
+        <h1 class="contactHeader">Contact Me</h1>
+        
+        <div class="contact_input">
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Brandon" required>
+
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Spangler" required>
+
+            <label for="content">Content of Message</label>
+            <input type="text" id="content" name="content" spellcheck="true" placeholder="Tacos" required>
+        </div>
+    </section> -->
+
+    <script>
+        function menuTransform(x) {
+            x.classList.toggle("change");
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.set('#projectTitle', {left: '50%', top: '50%', xPercent:-50, yPercent:-50, y: 50, x: '-200%'});
+        // gsap.set('#menuButton', {x: '-200%'});
+
+        gsap.to("#projectTitle", {
+                scrollTrigger: {
+                    trigger: "#projects",
+                    start: "top bottom",
+                    endTrigger: "#projectTitle",
+                    end: "bottom center",
+                    // markers: true,
+                    scrub: true,
+                    toggleActions: "restart none none none",
+                },
+                x: 0,
+            });
+
+        gsap.to("#headerPic", {
+            scrollTrigger: {
+                trigger: "#headerPic",
+                start: "center top",
+                end: "+=150",
+                scrub: 1,
+                toggleActions: "restart none reverse none",
+            },
+            y: -200,
+        });
+
+        gsap.to("#headerName", {
+            scrollTrigger: {
+                trigger: "#headerPic",
+                start: "center top",
+                scrub: 1,
+                toggleActions: "restart none reverse none",
+            },
+            y: 150,
+        });
+
+        gsap.to("#headerName", {
+            scrollTrigger: {
+                trigger: "#headerPic",
+                start: "bottom top",
+                end: "+=20",
+                // markers: true,
+                scrub: 1,
+                toggleActions: "restart none reverse none",
+            },
+            x: -70,
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon Spangler</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body style="background: white;">
+    <label for="skiplist_input">Enter Number</label>
+    <input type="text" id="skiplist_input" name="skiplist_input">
+
+
+</body>
+
+<script>
+    const input = document.getElementById("skiplist_input");
+
+    input.addEventListener('input', getValue);
+
+    function getValue() 
+    {
+        var toInsert = input.value;
+        console.log(toInsert);
+    }
+
+    input.addEventListener('blur', clearValue);
+
+    function clearValue() 
+    {
+        input.value='';
+        console.log("hello");
+    }
+
+</script>
+
+</html>

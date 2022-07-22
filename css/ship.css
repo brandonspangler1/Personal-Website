@@ -1,0 +1,353 @@
+.mouseAntimmationWrapper {
+    margin-top: 20vh;
+    transform: translate(0, 50px);
+    perspective: 2000px;
+}
+
+.ship {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    transform-style: preserve-3d;
+    /* transform-origin: 1rem; */
+    transform: rotateY(0deg) translate3D(15rem, -2rem, 0rem);
+    /* transform: rotateX(-60deg) */
+    /* transform: rotateZ(-60deg); */
+    /* width: 460px; */
+}
+
+.ship div {
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+/* .wing *:not(.covering),
+.wing *::before,
+.wing *::after {
+  border-right: 3px solid grey;
+  border-top: 2px solid grey;
+} */
+
+/* .wing .top::before {
+    transform: skew(45deg);
+} */
+
+.left-wing {
+    transform: translate3D(0rem, 0rem, 0rem) scale3d(1.1, 1.1, 1.1);
+}
+
+.left-wing .top-left {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(0rem, 0rem, 0rem) skew(-15deg);
+    /* transform: ; */
+}
+
+.left-wing .top-left-middle {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(3.5rem, 0rem, 0rem) skew(22deg);
+    /* transform: ; */
+}
+
+
+
+.left-wing .top {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 9rem;
+    height: 0.25rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(1.5rem, 0rem, 0rem) skew(-15deg);
+    /* transform: ; */
+}
+
+.left-wing .top-right-middle {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(8rem, 0rem, 0rem) skew(-22deg);
+    /* transform: ; */
+}
+
+
+
+  .left-wing .top-right {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* x y z */
+    transform: translate3D(11.5rem, 0, 0) skew(15deg);
+    /* transform: ; */
+  }
+
+.left-wing .middle {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 14rem;
+    height: 0.25rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(-1rem, 9.8rem, 0rem) skew(-15deg);
+    /* transform: ; */
+}
+
+.left-wing .middle-circle {
+    border: 0.25rem solid darkgrey;
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: darkgrey;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(4.7rem, 8.8rem, 0rem);
+    /* transform: ; */
+}
+
+.left-wing .bottom-left {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* x y z */
+    transform: translate3D(0, 9.95rem, 0) skew(15deg);
+}
+
+.left-wing .bottom-left-middle {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(3.6rem, 9.95rem, 0rem) skew(-22deg);
+    /* transform: ; */
+}
+
+
+.left-wing .bottom {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 9rem;
+    height: 0.25rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(1.5rem, 19.45rem, 0rem) skew(-15deg);
+    /* transform: ; */
+}
+
+.left-wing .bottom-right-middle {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(8rem, 9.95rem, 0rem) skew(22deg);
+    /* transform: ; */
+}
+
+.left-wing .bottom-right {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* x y z */
+    transform: translate3D(11.5rem, 9.95rem, 0) skew(-15deg);
+    /* transform: ; */
+  }
+
+
+  .center .middle-beam {
+    border: 1rem solid lightgrey;
+    /* border-radius: 100%; */
+    width: 1rem;
+    height: 15rem;
+    background: darkgrey;
+    transform:  rotate(90deg) rotateX(20deg) translate3D(0rem, -10rem, 0rem);
+    border-radius: 60px/25px;
+  }
+
+  .center .cockpit {
+    border: 0.5rem solid lightgrey;
+    border-radius: 100%;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: black;
+    transform:  rotate(90deg) translate3D(5.5rem, -10rem, 0rem);
+    /* border-radius: 60px/25px; */
+  }
+
+  .right-wing {
+    transform:  rotateY(-20deg) translate3D(4rem, -3rem, -20rem) scale3d(1.1, 1.1, 1.1);
+}
+
+.right-wing .top-left {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+   
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(0rem, 0rem, 0rem) skew(-15deg);
+    /* transform: ; */
+}
+
+.right-wing .top-left-middle {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(3.5rem, 0rem, 0rem) skew(22deg);
+    /* transform: ; */
+}
+
+
+
+.right-wing .top {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 9rem;
+    height: 0.25rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(1.5rem, 0rem, 0rem) skew(-15deg);
+    /* transform: ; */
+}
+
+.right-wing .top-right-middle {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(8rem, 0rem, 0rem) skew(-22deg);
+    /* transform: ; */
+}
+
+
+
+  .right-wing .top-right {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* x y z */
+    transform: translate3D(11.5rem, 0, 0) skew(15deg);
+    /* transform: ; */
+  }
+
+.right-wing .middle {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 14rem;
+    height: 0.25rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(-1rem, 9.8rem, 0rem) skew(-15deg);
+    /* transform: ; */
+}
+
+.right-wing .middle-circle {
+    border: 0.25rem solid darkgrey;
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: darkgrey;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(4.7rem, 8.8rem, 0rem);
+    /* transform: ; */
+}
+
+.right-wing .bottom-left {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* x y z */
+    transform: translate3D(0, 9.95rem, 0) skew(15deg);
+}
+
+.right-wing .bottom-left-middle {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(3.6rem, 9.95rem, 0rem) skew(-22deg);
+    /* transform: ; */
+}
+
+
+.right-wing .bottom {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 9rem;
+    height: 0.25rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(1.5rem, 19.45rem, 0rem) skew(-15deg);
+    /* transform: ; */
+}
+
+.right-wing .bottom-right-middle {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* perspective: 50px; */
+    /* x y z */
+    transform:  translate3D(8rem, 9.95rem, 0rem) skew(22deg);
+    /* transform: ; */
+}
+
+.right-wing .bottom-right {
+    border: 0.25rem solid darkgrey;
+    border-radius: 0.1rem;
+    width: 0.25rem;
+    height: 10rem;
+    background: white;
+    /* x y z */
+    transform: translate3D(11.5rem, 9.95rem, 0) skew(-15deg);
+    /* transform: ; */
+  }
