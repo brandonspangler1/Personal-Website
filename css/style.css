@@ -1,3 +1,12 @@
+/*
+Colors: 
+--rich-black-fogra-39: #0b0c10ff;
+--gunmetal: #1f2833ff;
+--princeton-orange: #fb8122ff;
+--baby-powder: #fffffaff;
+--slate-gray: #738290ff;
+*/
+
 @font-face {
     font-family: "JetBrains Mono";
     src: url("/fonts/JetBrainsMono/fonts/webfonts/JetBrainsMono-Regular.woff2") format("woff2");
@@ -21,7 +30,7 @@ body {
     background: #051622;
     background: #061926;
     /* background: #add; */
-    color: #FEFEFE;
+    color: #fffffa;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -135,7 +144,7 @@ button, .menuButton {
 .resumeBtn {
     text-decoration: none;
     /* background-color: gray; */
-    color: #FB8122;
+    color: #239DFB;
     border-radius: 1rem;
     font-size: 2.5rem;
     font-family: 'Titillium Web', sans-serif;
@@ -143,7 +152,7 @@ button, .menuButton {
     width: min-content;
     margin: 10px 2rem;
     /* opacity: 0.75; */
-    border: 0.25rem solid #124F7B;
+    border: 0.25rem solid #738290;
 }
 
 
@@ -329,9 +338,12 @@ button, .menuButton {
     grid-area: footer;
     background-color: #080628;
     background-color: #061926;
+    background-color: #1f2833ff;
     width: 100%;
     padding: 1rem 0 0 0;
-    box-shadow: 0 -2px 4px #A9D5F2;
+    /* box-shadow: 0 -2px 4px #A9D5F2; */
+    border-top: 1px solid white;
+    font-family: 'Raleway', sans-serif;
 }
 
 .contactMeWrapper {
@@ -344,11 +356,30 @@ button, .menuButton {
 
 .socialIconWrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: flex-end;
+    padding: 0 1rem 0 0;
+}
+
+.link1:hover, .link2:hover, .link3:hover{
+    color: #FB8122;
 }
 
 .socialIconLink {
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fffffaff;
+    padding: 0.25rem 0;
+}
+
+.socialName {
+    margin: 0;
+    font-weight: 400;
+    padding: 0 0.25rem 0 0;
 }
 
 .socialIcon {
@@ -361,17 +392,72 @@ button, .menuButton {
     background-color: black;
     display: flex;
     justify-content: space-between;
-    padding: 0 5rem;
+    padding: 0 6rem 0 6rem;
 }
 
 .contactMeHeader {
     margin: 0.25rem 0;
     font-size: 1.25rem;
+    text-align: center;
+    /* font-family: 'Verdana', sans-serif; */
 }
 
 .email {
     margin: 0.25rem 0;
     font-size: 1rem;
+}
+
+.emailHeaders {
+    display: flex;
+}
+
+.headerInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+    
+}
+
+.headerInput input {
+    width: 10rem;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.emailMessage {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.emailMessage label {
+    padding: 0.2rem 0;
+}
+
+.emailMessage textarea {
+    margin: 0;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.emailSubmit {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0 1rem 0;
+    /* cursor: pointer; */
+}
+
+.emailSubmit input {
+    background: none;
+    color: #239DFB;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #738290;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
 }
 
 .copyright, .websiteCode {
@@ -383,7 +469,7 @@ button, .menuButton {
 }
 
 .websiteCode {
-    color: #2CCCC3;
+    color: #239DFB;
     text-decoration: none;
 }
 
@@ -424,6 +510,17 @@ button, .menuButton {
     .aboutText {
         padding-top: 1rem;
     }
+    .resumeBtn {
+        margin: 10px 1rem;
+    }
+
+    .contactMeWrapper {
+        padding: 0 2rem;
+    }
+    
+    .footerBottom {
+        padding: 0 3rem 0 3rem;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -433,8 +530,23 @@ button, .menuButton {
     .welcomeTitle {
         font-size: 4rem;
     }
+    .resumeBtn {
+        font-size: 1.5rem;
+    }
     .aboutTitle {
         font-size: 4rem;
+    }
+
+    .contactMeWrapper {
+        padding: 0 0.5rem;
+    }
+    
+    .footerBottom {
+        padding: 0 1.5rem 0 1.5rem;
+    }
+
+    .headerInput input {
+        width: 7rem;
     }
 }
 

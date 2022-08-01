@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/navigation.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@700&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@700&family=Raleway&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
@@ -43,8 +43,8 @@
     </header>
 
     <section class="main" id="home">
-        <div class="intro">
-            <div class="welcomeSections">
+        <!-- <div class="intro"> -->
+            <!-- <div class="welcomeSections"> -->
                 <div class="welcomeTitleWrapper">
                     <h1 class="welcomeTitle orange">
                         Hello
@@ -56,8 +56,8 @@
                 <h2 class="welcomeMssg">
                     Full-Stack Developer and student at University of Central Florida
                 </h2>
-            </div>
-        </div>
+            <!-- </div> -->
+        <!-- </div> -->
 
         <div class="welcomeBtnWrapper">
             <a class="resumeBtn" href="/Resume.pdf">Resume</a>
@@ -203,36 +203,45 @@
             <div>
                 <h1 class="contactMeHeader">Contact me</h1>
                 <form action="./vendor/phpmailer/phpmailer/contact.php" method="POST" class="contactForm">
-                    <div class="">
-                      <label for="email">Email</label>
-                      <input type="email" name="email" id="email" required>
+                    <div class="emailHeaders">
+                        <div class="headerInput">
+                            <label for="name">Name</label>
+                            <input type="name" name="name" id="name" required>
+                        </div>
+                        <div class="headerInput"> 
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="headerInput">
+                            <label for="subject">Subject</label>
+                            <input type="subject" name="subject" id="subject" required>
+                        </div>
                     </div>
-                    <div class="">
-                      <label for="subject">Subject</label>
-                      <input type="subject" name="subject" id="subject" required>
-                    </div>
-                    <div class="">
-                        <label for="name">Name</label>
-                        <input type="name" name="name" id="name" required>
-                      </div>
-                    <div class="">
+                    <div class="emailMessage">
                         <label for="message">Message</label>
-                        <input type="text" name="message" id="message" required>
-                      </div>
-                    <div class="">
+                        <textarea name="message" id="message" required></textarea>
+                    </div>
+                    <div class="emailSubmit">
                       <input type="submit" value="Submit">
                     </div>
                   </form>
                 <!-- <a class="email">brandons0207@gmail.com</a> -->
             </div>
             <div class="socialIconWrapper">
-                <a class="socialIconLink">
+                <a class="socialIconLink link1" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">
+                    <h3 class="socialName">LinkedIn</h3>
                     <img  class="socialIcon"
-                        src="/images/linkedin_logo.png">
+                        src="/images/linkedin_logo_white.png">
                 </a>
-                <a class="socialIconLink">
+                <a class="socialIconLink link2" href="https://github.com/brandonspangler2">
+                    <h3 class="socialName">GitHub</h3>
                     <img  class="socialIcon"
                         src="/images/github_logo_light.png">
+                </a>
+                <a class="socialIconLink link3" href="">
+                    <h3 class="socialName">Discord</h3>
+                    <img  class="socialIcon"
+                        src="/images/Discord-Logo-White.png">
                 </a>
             </div>
         </div>

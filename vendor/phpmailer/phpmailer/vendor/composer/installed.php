@@ -3,7 +3,7 @@
         'name' => 'phpmailer/phpmailer',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'f10aae4bcce0531efd118e4cc5d97bf47100d80f',
+        'reference' => '01fb1ea5b64be93cc9e2bdde68ced95bdcc62a13',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -226,7 +226,7 @@
         'phpmailer/phpmailer' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'f10aae4bcce0531efd118e4cc5d97bf47100d80f',
+            'reference' => '01fb1ea5b64be93cc9e2bdde68ced95bdcc62a13',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
