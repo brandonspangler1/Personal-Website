@@ -84,10 +84,13 @@
     /* visibility: hidden; */
     font-family: 'Glegoo', serif;
     white-space: pre;
-    color: #FB8122;
+    color: #2CCCC3;
     cursor: pointer;
-    opacity: 0.75;
+    /* opacity: 0.75; */
     text-decoration: none;
+    border: 0.25rem solid #FB8122;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
 }
 
 .toProjectLibraryHeader:hover {

@@ -22,7 +22,7 @@
     <header class="navi header" id="header">
         <div class="headerInfo" id="headerInfo">
             <image class="personalPic" id="headerPic" src="images/Profile_Picture.jpg"></image>
-            <h1 class="headerName" id="headerName">Brandon Spangler</h1>
+            <button class="headerName" id="headerName" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Brandon Spangler</button>
         </div>
         
 
@@ -67,10 +67,10 @@
        
   
 
-        <div class="welcomeBtnWrapper projectBtnColumn">
-            <!-- <a class="welcomeBtn" href="">Resume</a> -->
+        <!-- <div class="welcomeBtnWrapper projectBtnColumn">
+            <a class="welcomeBtn" href="">Resume</a>
             <button class="projectBtn" onClick="gsap.to(window, {duration: 1.5, scrollTo: '#projects'})"><p class="projArrow">Projects</p><p class="projArrow arrowVertical">|</p><p class="projArrow arrowVertical">|</p><p class="projArrow arrowVertical">v</p></button>
-        </div>
+        </div> -->
         
     </section>
 
@@ -198,6 +198,50 @@
         </div>
     </section> -->
 
+    <footer class="footer">
+        <div class="contactMeWrapper">
+            <div>
+                <h1 class="contactMeHeader">Contact me</h1>
+                <form action="./vendor/phpmailer/phpmailer/contact.php" method="POST" class="contactForm">
+                    <div class="">
+                      <label for="email">Email</label>
+                      <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="">
+                      <label for="subject">Subject</label>
+                      <input type="subject" name="subject" id="subject" required>
+                    </div>
+                    <div class="">
+                        <label for="name">Name</label>
+                        <input type="name" name="name" id="name" required>
+                      </div>
+                    <div class="">
+                        <label for="message">Message</label>
+                        <input type="text" name="message" id="message" required>
+                      </div>
+                    <div class="">
+                      <input type="submit" value="Submit">
+                    </div>
+                  </form>
+                <!-- <a class="email">brandons0207@gmail.com</a> -->
+            </div>
+            <div class="socialIconWrapper">
+                <a class="socialIconLink">
+                    <img  class="socialIcon"
+                        src="/images/linkedin_logo.png">
+                </a>
+                <a class="socialIconLink">
+                    <img  class="socialIcon"
+                        src="/images/github_logo_light.png">
+                </a>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <h1 class="copyright">© 2022 Brandon Spangler</h1>
+            <a class="websiteCode" href="https://github.com/brandonspangler2/Personal-Website">Website Source Code</a>
+        </div>
+    </footer>
+
     <script>
         function menuTransform(x) {
             x.classList.toggle("change");
@@ -251,7 +295,7 @@
                 scrub: 1,
                 toggleActions: "restart none reverse none",
             },
-            x: -70,
+            x: -100,
         });
     </script>
 </body>
