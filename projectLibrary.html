@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandon Spangler</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico"/>
     <link rel="stylesheet" href="css/projectLibrary.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@700&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
@@ -20,7 +21,7 @@
     <header class="navi header" id="header">
         <div class="headerInfo" id="headerInfo">
             <!-- <image class="personalPic" id="headerPic" src="images/Profile_Picture.jpg"></image> -->
-            <h1 class="projectLibraryHeaderName">Brandon Spangler</h1>
+            <button onClick="location.href = 'index.html'" class="projectLibraryHeaderName">Brandon Spangler</button>
         </div>
         
 
@@ -47,7 +48,7 @@
 
     <section class="allProjects_wrap" id="projects">
         <a class="projectBlock" href="https://github.com/brandonspangler2/Personal-Website">
-            <image class="projectImage" src="images/Webstie_Home.png"></image>
+            <image class="projectImage" src="assets/images/Webstie_Home.png"></image>
             <div class="projectHidden">
                 <!-- <image class="photoCodeLogo" src="images/PhotoCode/photoCode-logo.png"></image> -->
                 <h3 class="projectBlockTitles zeroMargin">Personal</h3>
@@ -56,14 +57,14 @@
             </div>
         </a>
         <a class="projectBlock" href="https://github.com/ZacharyEbaugh/photoCode">
-            <image class="projectImage" src="images/PhotoCode/photoCode-library.png"></image>
+            <image class="projectImage" src="assets/images/PhotoCode/photoCode-library.png"></image>
             <div class="projectHidden">
-                <image class="photoCodeLogo" src="images/PhotoCode/photoCode-logo.png"></image>
+                <image class="photoCodeLogo" src="assets/images/PhotoCode/photoCode-logo.png"></image>
                 <h3 class="projectBlockTitles blackText">PhotoCode</h3>
             </div>
         </a>
         <a class="projectBlock" href="https://github.com/jyrz13149/Music_Player">
-            <image class="projectImage" src="images/Goatify.png"></image>
+            <image class="projectImage" src="assets/images/Goatify.png"></image>
             <div class="projectHidden">
                 <h3 class="projectBlockTitles">Goatify</h3>
             </div>
@@ -72,7 +73,7 @@
             <h3 class="projectBlockTitles">Macro Tracker</h3>
         </a> -->
         <a class="projectBlock" href="https://github.com/brandonspangler2/EVI">
-            <image class="projectImage" src="images/EVI_Home_Page.png"></image>
+            <image class="projectImage" src="assets/images/EVI_Home_Page.png"></image>
             <div class="projectHidden ">
                 <h3 class="projectBlockTitles zeroMargin outline">EVI</h3>
                 <h3 class="projectBlockTitles zeroMargin">Event</h3>
@@ -83,178 +84,64 @@
 
     </section>
 
-    <script>
-        function menuTransform(x) {
-            x.classList.toggle("change");
-        }
+    <footer class="footer">
+        <div class="contactMeWrapper">
+            <div>
+                <h1 class="contactMeHeader">Contact me</h1>
+                <form action="./vendor/phpmailer/phpmailer/contact.php" method="POST" class="contactForm" id="contactForm">
+                    <div class="emailHeaders">
+                        <div class="headerInput">
+                            <label for="name">Name</label>
+                            <input type="name" name="name" id="name" required>
+                        </div>
+                        <div class="headerInput"> 
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="headerInput">
+                            <label for="subject">Subject</label>
+                            <input type="subject" name="subject" id="subject" required>
+                        </div>
+                    </div>
+                    <div class="emailMessage">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" required></textarea>
+                    </div>
+                    <div class="emailSubmit">
+                      <input type="submit" value="Submit">
+                    </div>
+                  </form>
+                <!-- <a class="email">brandons0207@gmail.com</a> -->
+            </div>
+            <div class="socialIconWrapper">
+                <a class="socialIconLink link1" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">
+                    <h3 class="socialName">LinkedIn</h3>
+                    <img  class="socialIcon"
+                        src="assets/images/linkedin_logo_white.png">
+                </a>
+                <a class="socialIconLink link2" href="https://github.com/brandonspangler2">
+                    <h3 class="socialName">GitHub</h3>
+                    <img  class="socialIcon"
+                        src="assets/images/github_logo_light.png">
+                </a>
+                <a class="socialIconLink link3" href="">
+                    <h3 class="socialName">Discord</h3>
+                    <img  class="socialIcon"
+                        src="assets/images/Discord-Logo-White.png">
+                </a>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <h1 class="copyright">© 2022 Brandon Spangler</h1>
+            <a class="websiteCode" href="https://github.com/brandonspangler2/Personal-Website">Website Source Code</a>
+        </div>
+    </footer>
 
+    <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.to("#projectTitle", {
-            scrollTrigger: {
-                trigger: "#projectTitle",
-                start: "top bottom",
-                // markers: true,
-                toggleActions: "restart none none none",
-                onToggle: self => document.getElementById("projectTitle").style.visibility= "visible",
-            },
-            x: ((window.innerWidth * 0.9)/2 - (document.getElementById("projectTitle").offsetWidth)/2),
-            duration: 2,
-        });
-
-        console.log(((window.innerWidth * 0.9)/2));
-        console.log(((window.innerWidth * 0.9)/2 - (document.getElementById("projectTitle").offsetWidth)/2));
-        console.log(((document.getElementById("projectTitle").offsetWidth)/2));
-
-        gsap.to("#photo", {
-            scrollTrigger: {
-                trigger: "#photo",
-                start: "top bottom",
-                // markers: true,
-                toggleActions: "restart none none none",
-                onToggle: self => document.getElementById("projectTitle").style.visibility= "visible",
-            },
-            x: -((window.innerWidth * 0.9)/2 - (document.getElementById("projectTitle").offsetWidth)/2),
-            duration: 3,
-        });
-
-
-        gsap.to("#goat", {
-            scrollTrigger: {
-                trigger: "#goat",
-                start: "top bottom",
-                // markers: true,
-                toggleActions: "restart none none none",
-                onToggle: self => document.getElementById("projectTitle").style.visibility= "visible",
-            },
-            x: -((window.innerWidth * 0.9)/2 - (document.getElementById("projectTitle").offsetWidth)/2),
-            duration: 2,
-        });
-
-
-    //    let speed = 0.1;
-
-        gsap.to("#headerPic", {
-            scrollTrigger: {
-                trigger: "#headerPic",
-                start: "center top",
-                end: "+=150",
-                // end: "none none",
-                // markers: true,
-                scrub: 0.5,
-                toggleActions: "restart none reverse none",
-                // onEnter: self => document.getElementById("headerPic").style.visibility= "hidden",
-                // onEnterBack: self => document.getElementById("headerPic").style.visibility= "visible",
-                onToggle: self => {
-                    // if (document.getElementById("headerPic").style.visibility == "hidden")
-                    //     document.getElementById("headerPic").style.visibility= "visible";
-                    // else
-                    //     document.getElementById("headerPic").style.visibility= "hidden";
-                },
-            },
-            y: -200,
-            // speed: 0.5,
-            // duration: scrollSpeed,
-        });
-
-        gsap.to("#headerName", {
-            scrollTrigger: {
-                trigger: "#headerPic",
-                start: "center top",
-                // end: "+=150",
-                // end: "none none",
-                // markers: true,
-                scrub: 1,
-                toggleActions: "restart none reverse none",
-                // onEnter: self => document.getElementById("headerPic").style.visibility= "hidden",
-                // onEnterBack: self => document.getElementById("headerPic").style.visibility= "visible",
-                onToggle: self => {
-                    // if (document.getElementById("headerPic").style.visibility == "hidden")
-                    //     document.getElementById("headerPic").style.visibility= "visible";
-                    // else
-                    //     document.getElementById("headerPic").style.visibility= "hidden";
-                },
-            },
-            y: 150,
-            // x: -20,
-            // speed: 0.5,
-            // duration: 2,
-        });
-
-        // gsap.to("#headerName", {
-        //     scrollTrigger: {
-        //         trigger: "#headerPic",
-        //         // start: "bottom top",
-        //         start: "bottom top",
-        //         end: "+=20",
-        //         // end: "none none",
-        //         // markers: true,
-        //         scrub: 1,
-        //         toggleActions: "restart none reverse none",
-        //         // onEnter: self => document.getElementById("headerPic").style.visibility= "hidden",
-        //         // onEnterBack: self => document.getElementById("headerPic").style.visibility= "visible",
-        //         onToggle: self => {
-        //             // if (document.getElementById("headerPic").style.visibility == "hidden")
-        //             //     document.getElementById("headerPic").style.visibility= "visible";
-        //             // else
-        //             //     document.getElementById("headerPic").style.visibility= "hidden";
-        //         },
-        //     },
-        //     x: -70,
-        //     // x: -20,
-        //     // speed: 0.5,
-        //     // duration: 2,
-        // });
-
-        gsap.to("#project0", {
-            scrollTrigger: {
-                trigger: "#project0",
-                start: "top center",
-                // markers: true,
-                toggleActions: "restart none none none",
-                onToggle: self => document.getElementById("project0").style.filter= "blur(0)",
-            },
-            // x: ((window.innerWidth * 0.9)/2 - (document.getElementById("info").offsetWidth)/2),
-            // duration: 2,
-        });
-
-
-        // gsap.to("#headerPic", {
-        //     scrollTrigger: {
-        //         trigger: "#headerPic",
-        //         start: "none bottom",
-        //         markers: true,
-        //         toggleActions: "restart none none none",
-        //         onToggle: self => document.getElementById("headerPic").style.visibility= "visible",
-        //     },
-        //     // x: -((window.innerWidth * 0.9)/2 - (document.getElementById("info").offsetWidth)/2),
-        //     duration: 3,
-        // });
-
-
-        // let scene1 = gsap.timeline();
-        // ScrollTrigger.create({
-        //     animation: scene1,
-        //     trigger: ".scrollElement",
-        //     start: "#projects",
-        //     end: "45% 100%",
-        //     onToggle: self => console.log("toggled, isActive:", self.isActive),
-        //     scrub: 3,
-        // });
-        
-        const style = document.createElement('style');
-        var headerHeight = document.getElementById("header").offsetHeight;
-
-        style.innerHTML = `
-            .proj, .about {
-                padding-top: ${headerHeight}px;
-            }
-        `;
-
-        document.head.appendChild(style);
-
-        // console.log(headerHeight);
-        // document.getElementById("projects").style.padding = headerHeight;
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function(){form.reset()});
     </script>
 </body>
 </html>

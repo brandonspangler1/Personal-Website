@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandon Spangler</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico"/>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css"/>
     <link rel="stylesheet" href="css/navigation.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -24,22 +25,35 @@
             <image class="personalPic" id="headerPic" src="assets/images/Profile_Picture.jpg"></image>
             <button class="headerName" id="headerName" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Brandon Spangler</button>
         </div>
+
+        <button class="headerNameMobile" id="headerNameMobile" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Brandon Spangler</button>
         
 
-        <div class="menuBar" id="menuBar">
-            <div class="btn_wrap">
-                <button onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Home</button>
-                <button onClick="gsap.to(window, {duration: 0.75, scrollTo: '#projects'})">Projects</button>
-                <button onClick="gsap.to(window, {duration: 0.75, scrollTo: '#about'})">About Me</button>
+        <!-- <div class="menuBar" id="menuBar"> -->
+            <div class="btn_wrap" id="btn_wrap">
+                <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Home</button>
+                <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#projects'})">Projects</button>
+                <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#about'})">About Me</button>
                 <!-- <a href="#contact">Contact Me</a> -->
             </div> 
-
-            <!-- <div class="menuButton" id="menuButton" onClick="menuTransform(menuBar)">
+        
+            <div class="menuButton" id="menuButton" onClick="menuTransform(menuButton)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
-            </div> -->
-        </div>
+            </div>
+
+            <div class="hamburgerMenuWrapper" id="hamburgerMenuWrapper">
+                <div class="hamburgerMenu" id="hamburgerMenu">
+                    <button class="hamburgerBtns" id="firstHamburgerButton" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'}), menuTransform(menuButton)">Home</button>
+                    <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#projects'}), menuTransform(menuButton)">Projects</button>
+                    <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#about'}), menuTransform(menuButton)">About Me</button>
+                    <a class="hamburgerBtns" href="assets/Resume.pdf">Resume</a>
+                    <a class="hamburgerBtns" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">LinkedIn</a>
+                    <a class="hamburgerBtns" href="https://github.com/brandonspangler2">GitHub</a>
+                </div>
+            </div>
+        <!-- </div> -->
     </header>
 
     <section class="main" id="home">
@@ -202,7 +216,7 @@
         <div class="contactMeWrapper">
             <div>
                 <h1 class="contactMeHeader">Contact me</h1>
-                <form action="./vendor/phpmailer/phpmailer/contact.php" method="POST" class="contactForm">
+                <form action="./vendor/phpmailer/phpmailer/contact.php" method="POST" class="contactForm" id="contactForm">
                     <div class="emailHeaders">
                         <div class="headerInput">
                             <label for="name">Name</label>
@@ -252,9 +266,35 @@
     </footer>
 
     <script>
+        var flag = true;
         function menuTransform(x) {
             x.classList.toggle("change");
+            document.getElementById("hamburgerMenuWrapper").classList.toggle("change");
+            if (flag)
+                hamburgerMenu.style.transform = "translate(0," + (-headerHeight/2) + "px)";
+            else 
+                hamburgerMenu.style.transform = "translate(250%," + (-headerHeight/2) + "px)";
+
+            flag = !flag;
         }
+
+        var headerHeight = document.getElementById("header").offsetHeight;
+        // console.log(headerHeight);
+
+        const hamburgerMenu = document.getElementById("hamburgerMenu");
+        const firstHamburgerButton = document.getElementById("firstHamburgerButton");
+
+        hamburgerMenu.style.transform = "translate(250%," + (-headerHeight/2) + "px)";
+        firstHamburgerButton.style.marginTop = headerHeight + "px";
+
+        window.addEventListener('resize', function(){
+            headerHeight = document.getElementById("header").offsetHeight;
+            firstHamburgerButton.style.marginTop = headerHeight + "px";
+            // console.log(headerHeight);
+        });
+
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function(){form.reset()});
 
         gsap.registerPlugin(ScrollTrigger);
 
@@ -284,7 +324,7 @@
             },
             y: -200,
         });
-
+        
         gsap.to("#headerName", {
             scrollTrigger: {
                 trigger: "#headerPic",
