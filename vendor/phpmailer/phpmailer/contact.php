@@ -78,5 +78,5 @@
             // echo '<script> alert("Message sent!") </script>';
         }
         
-    echo "<script> window.history.back() </script>";
+    echo "<script> window.history.go(-1) </script>";
 ?>

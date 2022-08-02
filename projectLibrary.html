@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <body class="projectLibrary_wrap">
 
@@ -141,7 +142,28 @@
         gsap.registerPlugin(ScrollTrigger);
 
         const form = document.getElementById('contactForm');
-        form.addEventListener('submit', function(){form.reset()});
+        window.onload = function(){form.rest()};
+
+        $("#contactForm").submit(function(event) {
+            event.preventDefault();
+            var form = $("#contactForm");
+            var url = form.attr('action');
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: form.serialize(),
+                success: function(data) {
+                    // Ajax call completed successfully
+                    alert("Form Submited Successfully");
+                    document.getElementById("contactForm").reset();
+                },
+                error: function(data) {
+                      
+                    // Some error in ajax call
+                    alert("some Error");
+                }
+            });
+        });
     </script>
 </body>
 </html>
