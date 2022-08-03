@@ -218,7 +218,7 @@
         <div class="contactMeWrapper">
             <div>
                 <h1 class="contactMeHeader">Contact me</h1>
-                <form action="vendor/phpmailer/phpmailer/contact.php" method="POST" class="contactForm" id="contactForm">
+                <form action="vendor/phpmailer/phpmailer/form.php" method="POST" class="contactForm" id="contactForm">
                     <div class="emailHeaders">
                         <div class="headerInput">
                             <label for="name">Name</label>
@@ -296,7 +296,7 @@
         });
 
         const form = document.getElementById('contactForm');
-        window.onload = function(){form.rest()};
+        window.onload = function(){form.reset()};
 
         gsap.registerPlugin(ScrollTrigger);
 
@@ -349,26 +349,28 @@
             x: -100,
         });
 
-        $("#contactForm").submit(function(event) {
-            event.preventDefault();
-            var form = $("#contactForm");
-            var url = form.attr('action');
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: form.serialize(),
-                success: function(data) {
-                    // Ajax call completed successfully
-                    alert("Form Submited Successfully");
-                    document.getElementById("contactForm").reset();
-                },
-                error: function(data) {
-                      
-                    // Some error in ajax call
-                    alert("some Error");
-                }
+        $(document).ready(function(){
+            $("#contactForm").submit(function(event) {
+                event.preventDefault();
+                var form = $("#contactForm");
+                var url = form.attr('action');
+                $.ajax({
+                    type: "POST",
+                    timeout: 10000,
+                    url: url,
+                    data: form.serialize(),
+                    success: function(data) {
+                        // Ajax call completed successfully
+                        alert("Message Sent Successfully");
+                        document.getElementById("contactForm").reset();
+                    },
+                    error:  function(data) {
+                                alert("Message failed to send. Please try again later.");
+                            }
+                });
             });
         });
+        
     </script>
 </body>
 </html>

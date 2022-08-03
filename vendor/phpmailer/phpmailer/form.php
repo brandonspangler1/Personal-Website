@@ -73,10 +73,10 @@
 
 
         if (!$mail->send()) {
-            // echo '<script> alert("Mailer Error: " . $mail->ErrorInfo) </script>';
+            echo '<script> alert("Mailer Error: " . $mail->ErrorInfo) </script>';
         } else {
-            // echo '<script> alert("Message sent!") </script>';
+            echo '<script> alert("Message sent!") </script>';
         }
         
-    echo "<script> window.history.go(-1) </script>";
+    // echo "<script> window.history.go(-1) </script>";
 ?>
