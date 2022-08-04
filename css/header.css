@@ -12,6 +12,7 @@
 
 .menuButton {
     visibility: hidden;
+    position: absolute;
 }
 
 
@@ -113,7 +114,7 @@
     /* animation: fadeOut 1s; */
     /* transition-delay: 1s; */
     /* visibility: hidden; */
-    margin-right: 8vw;
+    /* margin-right: 8vw; */
 }
 
 .btn_wrap a {
@@ -210,7 +211,7 @@
         z-index: 5;
     }
     .menuButton {
-         /* position: absolute;  */
+        position: relative; 
         visibility: visible;
         padding: 0 1rem 0 0;
     }
@@ -229,7 +230,7 @@
         background-color: #061926;
         height: 100vh;
         width: 100vw;
-        border-left: 1px solid #fffffaff;
+        /* border-left: 1px solid #fffffaff; */
         /* transform: translate(100%, 0); */
     }
     

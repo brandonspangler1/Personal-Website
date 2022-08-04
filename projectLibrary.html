@@ -109,7 +109,7 @@
                         <textarea name="message" id="message" required></textarea>
                     </div>
                     <div class="emailSubmit">
-                      <input type="submit" value="Submit">
+                        <input type="submit" name="submit" id="submit" value="Submit">
                     </div>
                   </form>
                 <!-- <a class="email">brandons0207@gmail.com</a> -->
@@ -144,25 +144,41 @@
         const form = document.getElementById('contactForm');
         window.onload = function(){form.rest()};
 
+        formSubmitButton = document.getElementById("submit");
+
+        function submitLockout() {
+            formSubmitButton.value = 'Submitting';
+            formSubmitButton.disabled = true;
+            formSubmitButton.style.cursor = "not-allowed";
+        }
+
+        function submitOpen() {
+            document.getElementById("contactForm").reset();
+            formSubmitButton.value = 'Submit';
+            formSubmitButton.disabled = false;
+            formSubmitButton.style.cursor = "pointer";
+        }
+
         $(document).ready(function(){
             $("#contactForm").submit(function(event) {
                 event.preventDefault();
+                submitLockout();
                 var form = $("#contactForm");
                 var url = form.attr('action');
                 $.ajax({
                     type: "POST",
+                    timeout: 10000,
                     url: url,
                     data: form.serialize(),
                     success: function(data) {
                         // Ajax call completed successfully
-                        alert("Form Submited Successfully");
-                        document.getElementById("contactForm").reset();
+                        alert("Message Sent Successfully");
+                        submitOpen();
                     },
-                    error: function(data) {
-                        
-                        // Some error in ajax call
-                        alert("some Error");
-                    }
+                    error:  function(data) {
+                                alert("Message failed to send. Please try again later.");
+                                submitOpen();
+                            }
                 });
             });
         });
