@@ -16,6 +16,7 @@
 
 .projectTitle {
     margin-top: 90px;
+    margin-bottom: 0;
     font-size: 6rem;
     width: min-content;
     /* visibility: hidden; */

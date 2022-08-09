@@ -270,13 +270,14 @@ button, .menuButton {
     margin: 20px 0;
     border-radius: 2px;
     background-color: #407899;
+    background-color: #738290ff;
     box-shadow: 10px 5px 5px #254658;
 }
 
 .profilePicture {
     height: 18rem;
     width: 18rem;
-    border: 2px outset #FB8122;
+    border: 2px solid #0b0c10ff;
     /* border-radius: 300px; */
     margin: 30px;
 }
