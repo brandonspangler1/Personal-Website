@@ -1,10 +1,10 @@
 /*
 Colors: 
---rich-black-fogra-39: #0b0c10ff;
---gunmetal: #1f2833ff;
---princeton-orange: #fb8122ff;
---baby-powder: #fffffaff;
---slate-gray: #738290ff;
+--rich-black-fogra-29: #061926;
+--gunmetal: #1f2833;
+--princeton-orange: #fb8122;
+--baby-powder: #fffffa;
+--slate-gray: #738290;
 */
 
 @font-face {
@@ -15,7 +15,6 @@ Colors:
 
 html {
     box-sizing: border-box;
-    /* height: 100%; */
     overflow-x: hidden;
     font-size: 1vw;
 }
@@ -29,6 +28,7 @@ body {
     background: #A0AECD;
     background: #051622;
     background: #061926;
+    /* background: #14213d; */
     /* background: #add; */
     color: #fffffa;
     margin: 0;
@@ -230,37 +230,88 @@ button, .menuButton {
     font-family: 'Glegoo', serif;
 }
 
+.projectTitle {
+    margin-top: 90px;
+    margin-bottom: 0;
+    font-size: 6rem;
+    width: min-content;
+    /* visibility: hidden; */
+    font-family: 'Glegoo', serif;
+    white-space: pre;
+    color: #FB8122;
+    position: relative;
+}
+
+.projectHeader {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+}
+
+.projectDes {
+    font-size: 1.5rem;
+    font-family: 'Titillium Web', sans-serif;
+    margin: 2rem;
+}
+
 .project_wrap {
-    max-width: 20000px;
-    /* height: 100%;  */
-    margin: 100px auto;
-    /* padding: 60px 0; */
-    display: grid;
-    grid-template-areas:
-        "des visual visual"
-        "arrow arrow arrow";
-    grid-template-columns: 40% auto;
-    grid-template-rows: auto;
-    /* gap: 10px; */
-    padding: 1rem 0;
+    margin: 5rem auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
     
-    /* background-color: #007EA7; */
-    /* background-image: linear-gradient(#007EA7 20%, #003459); */
-    align-items: center;
-    justify-items: center;
-
-    border-radius: 25px;
-    background-color: #FEFEFE;
-    opacity: 0.75;
-    width: 75%;
+    /* background-color: #FEFEFE; */
+    /* background-color: #D7D9CE; */
+    background-color: #e1e2e2;
     color: black;
-    overflow: hidden;
 }
 
-.des {
-    grid-area: des;
-    padding-left: 5px;
+.projectOverviewWrapper {
+    display: flex;
+    margin-bottom: 2rem;
 }
+
+.photoCodeSpread {
+    height: 24rem; 
+    width: 37.44rem;
+}
+
+.projectDescriptionWrapper {
+
+}
+
+.goatifyComputer {
+    height: 20rem;
+    border-radius: 5px;
+}
+
+.projectLibraryWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toProjectLibraryHeader {
+    margin-top: 0px;
+    font-size: 4rem;
+    width: min-content;
+    font-family: 'Glegoo', serif;
+    white-space: pre;
+    color: #239DFB;
+    cursor: pointer;
+    text-decoration: none;
+    border: 0.25rem solid #738290;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.toProjectLibraryHeader:hover {
+    text-decoration: underline;
+}
+
 
 .aboutWrapper {
     display: flex;
@@ -270,7 +321,7 @@ button, .menuButton {
     margin: 20px 0;
     border-radius: 2px;
     background-color: #407899;
-    background-color: #738290ff;
+    background-color: #738290;
     box-shadow: 10px 5px 5px #254658;
 }
 
@@ -377,6 +428,23 @@ button, .menuButton {
     .resumeBtn {
         margin: 10px 1rem;
     }
+
+    .projectOverviewWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project_wrap {
+        grid-template-areas: 
+            "des"
+            "visual"
+            "arrow";
+        justify-items: flex-start;
+        border-radius: 1rem;
+    }
+    .projectTitle {
+        font-size: 5rem;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -391,6 +459,17 @@ button, .menuButton {
     }
     .aboutTitle {
         font-size: 4rem;
+    }
+    .projectTitle {
+        font-size: 4rem;
+    }
+
+    .toProjectLibraryHeader {
+        font-size: 2rem;
+    }
+    .photoCodeSpread {
+        height: 22rem;
+        width: 34.32rem;
     }
 }
 
