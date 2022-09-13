@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goatify Case Study</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico"/>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/goatify_styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@700&family=Raleway&family=Roboto+Slab&family=Rubik&family=Titillium+Web&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body class="grid_wrap">
+    <header class="navi header" id="header">
+        <div class="headerInfo" id="headerInfo">
+            <button class="personalPicButton" id="headerPic" onClick="location.href = 'index.html'"><img class="personalPic"  src="assets/images/Profile_Picture.jpg" /></button>
+            <button class="headerName" id="headerName" onClick="location.href = 'index.html'">Brandon Spangler</button>
+        </div>
+
+        <button class="headerNameMobile" id="headerNameMobile" onClick="location.href = 'index.html'">Brandon Spangler</button>
+        
+
+        <!-- <div class="menuBar" id="menuBar"> -->
+            <div class="btn_wrap" id="btn_wrap">
+                <button class="headerBtns" onClick="location.href = 'https://github.com/brandonspangler2/goatify'">Goatify Source Code</button>
+                <button class="headerBtns" onClick="location.href = 'https://brandonspangler.com/goatify'">Goatify Website</button>
+            </div> 
+        
+            <div class="menuButton" id="menuButton" onClick="menuTransform(menuButton)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+            <div class="hamburgerMenuWrapper" id="hamburgerMenuWrapper">
+                <div class="hamburgerMenu" id="hamburgerMenu">
+                    <button class="hamburgerBtns" id="firstHamburgerButton" onClick="location.href = 'index.html', menuTransform(menuButton)">Home</button>
+                    <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#footer'}), menuTransform(menuButton)">Contact Me</button>
+                    <button class="hamburgerBtns" onClick="location.href = 'https://github.com/brandonspangler2/goatify'">Goatify Source Code</button>
+                    <a class="hamburgerBtns" href="assets/Resume.pdf">Resume</a>
+                    <a class="hamburgerBtns" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">LinkedIn</a>
+                    <a class="hamburgerBtns" href="https://github.com/brandonspangler2">GitHub</a>
+                </div>
+            </div>
+        <!-- </div> -->
+    </header>
+
+    <section class="main" id="home">
+        <div class="goatifyHeaderWrap" id="goatifyHeader">
+            <h1 class="goatifyHeader">Goatify </h1>
+            <h1 class="goatifyHeader orange">-- </h1>
+            <h1 class="goatifyHeader">Online Music Player</h1>
+        </div>
+        <section class="goatifyInfoWrap">
+            <article class="goatifyInfo"> 
+                <h2 class="goatifyInfoHeader">Project Goals</h2>
+                <h3 class="projectGoalMain">1. Stores songs in database with associated information</h3> 
+                    <h4 class="projectGoalSub">- Song name, artist, album, release year, genre</h4>
+                <h3 class="projectGoalMain">2. Allow Users to create an account</h3>
+                <h3 class="projectGoalMain">3. Allow Users to create multiple playlists and save those in the database</h3>
+                <h3 class="projectGoalMain">4. Must be useable on any device with a web browser</h3>
+                <h3 class="projectGoalMain">5. Allow Users to Search for songs with any of the following</h3>
+                    <h4 class="projectGoalSub">- Song name, artist name, album name</h4>
+                <h3 class="projectGoalMain">6. Allow Users to filter search results by</h3>
+                    <h4 class="projectGoalSub">- Release year, genre</h4>
+                <h3 class="projectGoalMain">7. A new User must be forced to create a playlist immediately</h3>
+                <h3 class="projectGoalMain">8. The music player must have the following features</h3>
+                    <h4 class="projectGoalSub">- Play, pause, skip, and previous song</h4> 
+                    <h4 class="projectGoalSub">- Play current song/playlist in a loop</h4>
+                    <h4 class="projectGoalSub">- Not download all the songs to the User's device</h4>
+            </article>
+
+            <article class="goatifyInfo"> 
+                <h2 class="goatifyInfoHeader">Technologies</h2>
+                <h3 class="projectGoalMain">Languages</h3>
+                    <h4 class="projectGoalSub">- HTML, CSS, JavaScript, PHP</h4>
+                <h3 class="projectGoalMain">Software</h3>
+                    <h4 class="projectGoalSub">- Figma for UX/UI Design</h4>
+                    <h4 class="projectGoalSub">- PHPmyAdmin for DBMS</h4>
+                    <h4 class="projectGoalSub">- XAMPP for local testing</h4>
+            </article>
+
+            <article class="goatifyInfo"> 
+                <h2 class="goatifyInfoHeader">Updates</h2>
+                <h3 class="projectGoalMain">Styles and Responsiveness</h3>
+                    <h4 class="projectGoalSub">- Continue to update styles and refine Goatify look</h4>
+                    <h4 class="projectGoalSub">- Continue to update original project styling</h4>
+                    <h4 class="projectGoalSub">- Seamless design between mobile and desktop</h4>
+                <h3 class="projectGoalMain">Ability to Connect Spotify Account</h3>
+                    <h4 class="projectGoalSub">- Used Spotify Web APIs</h4>
+                    <h4 class="projectGoalSub">- Display Users profile name, email, and link</h4>
+                    <h4 class="projectGoalSub">- Display Users top five songs and link them to Spotify</h4>
+            </article>
+            <article class="goatifyInfo"> 
+                <h2 class="goatifyInfoHeader">Goatify Test Account</h2>
+                <h3 class="projectGoalMain">Username</h3>
+                    <h4 class="projectGoalSub">public@goatify.com</h4>
+                <h3 class="projectGoalMain">Password</h3>
+                    <h4 class="projectGoalSub">goatify</h4>
+            </article>  
+        </section>
+        <iframe class="goatifyFrame" id="goatifyWebsite" title="Embed Goatify Website" src="https://brandonspangler.com/goatify/index.php"></iframe>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="contactMeWrapper">
+            <div>
+                <h1 class="contactMeHeader">Contact me</h1>
+                <form action="form.php" method="POST" class="contactForm" id="contactForm">
+                    <div class="emailHeaders">
+                        <div class="headerInput">
+                            <label for="name">Name</label>
+                            <input type="name" name="name" id="name" required>
+                        </div>
+                        <div class="headerInput"> 
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="headerInput">
+                            <label for="subject">Subject</label>
+                            <input type="subject" name="subject" id="subject" required>
+                        </div>
+                    </div>
+                    <div class="emailMessage">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" required></textarea>
+                    </div>
+                    <div class="emailSubmit">
+                      <input type="submit" name="submit" id="submit" value="Submit">
+                    </div>
+                  </form>
+                <!-- <a class="email">brandons0207@gmail.com</a> -->
+            </div>
+            <div class="socialIconWrapper">
+                <a class="socialIconLink link1" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">
+                    <h3 class="socialName">LinkedIn</h3>
+                    <img  class="socialIcon"
+                        src="assets/images/linkedin_logo_white.png">
+                </a>
+                <a class="socialIconLink link2" href="https://github.com/brandonspangler2">
+                    <h3 class="socialName">GitHub</h3>
+                    <img  class="socialIcon"
+                        src="assets/images/github_logo_light.png">
+                </a>
+                <a class="socialIconLink link3" href="">
+                    <h3 class="socialName">Discord</h3>
+                    <img  class="socialIcon"
+                        src="assets/images/Discord-Logo-White.png">
+                </a>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <h1 class="copyright">© 2022 Brandon Spangler</h1>
+            <a class="websiteCode" href="https://github.com/brandonspangler2/Personal-Website">Website Source Code</a>
+        </div>
+    </footer>
+
+    <script src="scripts/header.js"></script>
+    <script src="scripts/footer.js"></script>
+
+    <script>
+       var headerHeight = document.getElementById("header").offsetHeight;
+       console.log(headerHeight);
+       document.getElementById('goatifyHeader').style.marginTop = (headerHeight + 28) + 'px';
+
+       window.addEventListener('resize', () => {
+        document.getElementById('goatifyHeader').style.marginTop = (headerHeight + 28) + 'px';
+       })
+    </script>
+</body>
+</html>

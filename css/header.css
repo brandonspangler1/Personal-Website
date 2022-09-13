@@ -1,3 +1,18 @@
+.navi { 
+    grid-area: header; 
+    /* height: 100%; */
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center; 
+
+}
+
+.navi_btns img {
+    max-width: 25px;
+}
+
 .header {
     /* background-color: #121111; */
     background: #051622;
@@ -15,9 +30,6 @@
     position: absolute;
 }
 
-
-
-
 .headerInfo {
     display: flex;
     flex-direction: row;
@@ -30,7 +42,7 @@
     opacity: 0.75;
     /* visibility: hidden; */
     position: relative;
-    top: -150px
+    top: -150px;
 }
 
 .headerNameMobile {
@@ -44,10 +56,18 @@
     font-size: 2.5rem;
 }
 
+.personalPicButton {
+    background: none;
+    border: none;
+    width: fit-content;
+    padding: 0;
+    margin: 0.5rem 2rem;
+}
+
 .personalPic {
     width: 5rem;
     height: 5rem;
-    margin: 0.5rem 2rem;
+    /* margin: 0.5rem 2rem; */
     border-radius: 0.5rem;
     border: 3px solid #124F7B;
     visibility: visible;
@@ -137,6 +157,8 @@
     font-size: 2.5rem;
     font-family: 'Rubik', sans-serif;
 }
+
+
 
 .hamburgerMenuWrapper {
     position: absolute;

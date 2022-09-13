@@ -22,7 +22,7 @@
 <body class="grid_wrap">
     <header class="navi header" id="header">
         <div class="headerInfo" id="headerInfo">
-            <image class="personalPic" id="headerPic" src="assets/images/Profile_Picture.jpg"></image>
+            <button class="personalPicButton" id="headerPic" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})"><img class="personalPic"  src="assets/images/Profile_Picture.jpg" /></button>
             <button class="headerName" id="headerName" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Brandon Spangler</button>
         </div>
 
@@ -131,7 +131,8 @@
             </div>
             <div class="arrowWrap">
                 <h3 class="explore">Explore</h3>
-                <a class="arrow" href="https://github.com/brandonspangler2/goatify">
+                <!-- <a class="arrow" href="https://github.com/brandonspangler2/goatify"> -->
+                <a class="arrow" href="goatify-case-study.html">
                     <image class="arrowSize" src="assets/images/Arrow.png"></image>
                 </a>
             </div>
@@ -265,37 +266,10 @@
         </div>
     </footer>
 
+    <script src="scripts/header.js"></script>
+    <script src="scripts/footer.js"></script>
+
     <script>
-        var flag = true;
-        function menuTransform(x) {
-            x.classList.toggle("change");
-            document.getElementById("hamburgerMenuWrapper").classList.toggle("change");
-            if (flag)
-                hamburgerMenu.style.transform = "translate(0," + (-headerHeight/2) + "px)";
-            else 
-                hamburgerMenu.style.transform = "translate(250%," + (-headerHeight/2) + "px)";
-
-            flag = !flag;
-        }
-
-        var headerHeight = document.getElementById("header").offsetHeight;
-        // console.log(headerHeight);
-
-        const hamburgerMenu = document.getElementById("hamburgerMenu");
-        const firstHamburgerButton = document.getElementById("firstHamburgerButton");
-
-        hamburgerMenu.style.transform = "translate(250%," + (-headerHeight/2) + "px)";
-        firstHamburgerButton.style.marginTop = headerHeight + "px";
-
-        window.addEventListener('resize', function(){
-            headerHeight = document.getElementById("header").offsetHeight;
-            firstHamburgerButton.style.marginTop = headerHeight + "px";
-            // console.log(headerHeight);
-        });
-
-        const form = document.getElementById('contactForm');
-        window.onload = function(){form.reset()};
-
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.set('#projectTitle', {left: '50%', top: '50%', xPercent:-50, yPercent:-50, y: 50, x: '-200%'});
@@ -312,80 +286,8 @@
                     toggleActions: "restart none none none",
                 },
                 x: 0,
+                // duration: 2,
             });
-
-        gsap.to("#headerPic", {
-            scrollTrigger: {
-                trigger: "#headerPic",
-                start: "center top",
-                end: "+=150",
-                scrub: 1,
-                toggleActions: "restart none reverse none",
-            },
-            y: -200,
-        });
-        
-        gsap.to("#headerName", {
-            scrollTrigger: {
-                trigger: "#headerPic",
-                start: "center top",
-                scrub: 1,
-                toggleActions: "restart none reverse none",
-            },
-            y: 150,
-        });
-
-        gsap.to("#headerName", {
-            scrollTrigger: {
-                trigger: "#headerPic",
-                start: "bottom top",
-                end: "+=20",
-                // markers: true,
-                scrub: 1,
-                toggleActions: "restart none reverse none",
-            },
-            x: -100,
-        });
-
-        formSubmitButton = document.getElementById("submit");
-
-        function submitLockout() {
-            formSubmitButton.value = 'Submitting';
-            formSubmitButton.disabled = true;
-            formSubmitButton.style.cursor = "not-allowed";
-        }
-
-        function submitOpen() {
-            document.getElementById("contactForm").reset();
-            formSubmitButton.value = 'Submit';
-            formSubmitButton.disabled = false;
-            formSubmitButton.style.cursor = "pointer";
-        }
-
-        $(document).ready(function(){
-            $("#contactForm").submit(function(event) {
-                event.preventDefault();
-                submitLockout();
-                var form = $("#contactForm");
-                var url = form.attr('action');
-                $.ajax({
-                    type: "POST",
-                    timeout: 10000,
-                    url: url,
-                    data: form.serialize(),
-                    success: function(data) {
-                        // Ajax call completed successfully
-                        alert("Message Sent Successfully");
-                        submitOpen();
-                    },
-                    error:  function(data) {
-                                alert("Message failed to send. Please try again later.");
-                                submitOpen();
-                            }
-                });
-            });
-        });
-        
     </script>
 </body>
 </html>
