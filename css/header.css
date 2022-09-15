@@ -61,7 +61,7 @@
     border: none;
     width: fit-content;
     padding: 0;
-    margin: 0.5rem 2rem;
+    margin: 0.5rem 4rem;
 }
 
 .personalPic {
@@ -147,15 +147,23 @@
     font-size: 2.5rem;
 }
 
-.btn_wrap button, .headerName {
+.headerBtns, .headerName {
     border: none;
     background: none;
     text-decoration: none;
     color: #FEFEFE;
-    margin: 0 2vw;
+    margin: 0 2rem;
     opacity: 0.75;
     font-size: 2.5rem;
     font-family: 'Rubik', sans-serif;
+}
+
+.headerName {
+    margin-left: 4rem;
+}
+
+.rightMostHeaderBtn {
+    margin-right: 4rem;
 }
 
 

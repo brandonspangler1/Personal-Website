@@ -8,6 +8,7 @@
     <title>Brandon Spangler</title>
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico"/>
     <link rel="stylesheet" href="css/projectLibrary.css" />
+    <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -17,31 +18,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
-<body class="projectLibrary_wrap">
+<body class="projectLibraryWrapper">
 
     <header class="navi header" id="header">
         <div class="headerInfo" id="headerInfo">
-            <!-- <image class="personalPic" id="headerPic" src="images/Profile_Picture.jpg"></image> -->
-            <button onClick="location.href = 'index.html'" class="projectLibraryHeaderName">Brandon Spangler</button>
+            <button class="personalPicButton" id="headerPic" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})"><img class="personalPic"  src="assets/images/Profile_Picture.jpg" /></button>
+            <button class="headerName" id="headerName" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Brandon Spangler</button>
         </div>
+
+        <button class="headerNameMobile" id="headerNameMobile" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Brandon Spangler</button>
         
 
-        <div class="menuBar" id="menuBar">
-            <div class="btn_wrap">
-                <button onClick="location.href = 'index.html'">Home</button>
+        <!-- <div class="menuBar" id="menuBar"> -->
+            <div class="btn_wrap" id="btn_wrap">
+                <button class="headerBtns rightMostHeaderBtn" onClick="location.href = 'index.html'">Home</button>
+                <!-- <a href="#contact">Contact Me</a> -->
             </div> 
-
-            <div class="menuButton" onClick="menuTransform(menuBar)">
+        
+            <div class="menuButton" id="menuButton" onClick="menuTransform(menuButton)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
-        </div>
-        
-        <!-- <button class="linkedin_btn" onClick="location.href = 'https://www.linkedin.com/in/brandon-spangler-0680291a0/'">/button> -->
+
+            <div class="hamburgerMenuWrapper" id="hamburgerMenuWrapper">
+                <div class="hamburgerMenu" id="hamburgerMenu">
+                    <button class="hamburgerBtns" id="firstHamburgerButton" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'}), menuTransform(menuButton)">Home</button>
+                    <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#projects'}), menuTransform(menuButton)">Projects</button>
+                    <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#about'}), menuTransform(menuButton)">About Me</button>
+                    <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#footer'}), menuTransform(menuButton)">Contact Me</button>
+                    <a class="hamburgerBtns" href="assets/Resume.pdf">Resume</a>
+                    <a class="hamburgerBtns" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">LinkedIn</a>
+                    <a class="hamburgerBtns" href="https://github.com/brandonspangler2">GitHub</a>
+                </div>
+            </div>
+        <!-- </div> -->
     </header>
 
-    <section class="welcomeProjectLibrary" id="home">
+    <section class="welcomeProjectLibrary" id="projectLibraryHeader">
         <div>
             <h2>Welcome to the Project Library, below you can view all of my projects.</h2>
         </div>
@@ -52,8 +66,8 @@
             <image class="projectImage" src="assets/images/Webstie_Home.png"></image>
             <div class="projectHidden">
                 <!-- <image class="photoCodeLogo" src="images/PhotoCode/photoCode-logo.png"></image> -->
-                <h3 class="projectBlockTitles zeroMargin">Personal</h3>
-                <h3 class="projectBlockTitles zeroMargin bottom">Website</h3>
+                <h3 class="projectBlockTitles">Personal</h3>
+                <h3 class="projectBlockTitles bottom">Website</h3>
 
             </div>
         </a>
@@ -61,13 +75,13 @@
             <image class="projectImage" src="assets/images/PhotoCode/photoCode-library.png"></image>
             <div class="projectHidden">
                 <image class="photoCodeLogo" src="assets/images/PhotoCode/photoCode-logo.png"></image>
-                <h3 class="projectBlockTitles blackText">PhotoCode</h3>
+                <h3 class="projectBlockTitles blackText bottom">PhotoCode</h3>
             </div>
         </a>
         <a class="projectBlock" href="https://github.com/jyrz13149/Music_Player">
             <image class="projectImage" src="assets/images/Goatify.png"></image>
             <div class="projectHidden">
-                <h3 class="projectBlockTitles">Goatify</h3>
+                <h3 class="projectBlockTitles bottom">Goatify</h3>
             </div>
         </a>
         <!-- <a class="projectBlock">
@@ -76,9 +90,9 @@
         <a class="projectBlock" href="https://github.com/brandonspangler2/EVI">
             <image class="projectImage" src="assets/images/EVI_Home_Page.png"></image>
             <div class="projectHidden ">
-                <h3 class="projectBlockTitles zeroMargin outline">EVI</h3>
-                <h3 class="projectBlockTitles zeroMargin">Event</h3>
-                <h3 class="projectBlockTitles zeroMargin bottom">Tracker</h3>
+                <h3 class="projectBlockTitles">EVI</h3>
+                <h3 class="projectBlockTitles">Event</h3>
+                <h3 class="projectBlockTitles bottom">Tracker</h3>
             </div>
         </a>
        
@@ -138,50 +152,17 @@
         </div>
     </footer>
 
+    <script src="scripts/header.js"></script>
+    <script src="scripts/footer.js"></script>
+
     <script>
-        gsap.registerPlugin(ScrollTrigger);
+        var headerHeight = document.getElementById("header").offsetHeight;
+        console.log(headerHeight);
+        document.getElementById('projectLibraryHeader').style.marginTop = (headerHeight + 28) + 'px';
 
-        const form = document.getElementById('contactForm');
-        window.onload = function(){form.rest()};
-
-        formSubmitButton = document.getElementById("submit");
-
-        function submitLockout() {
-            formSubmitButton.value = 'Submitting';
-            formSubmitButton.disabled = true;
-            formSubmitButton.style.cursor = "not-allowed";
-        }
-
-        function submitOpen() {
-            document.getElementById("contactForm").reset();
-            formSubmitButton.value = 'Submit';
-            formSubmitButton.disabled = false;
-            formSubmitButton.style.cursor = "pointer";
-        }
-
-        $(document).ready(function(){
-            $("#contactForm").submit(function(event) {
-                event.preventDefault();
-                submitLockout();
-                var form = $("#contactForm");
-                var url = form.attr('action');
-                $.ajax({
-                    type: "POST",
-                    timeout: 10000,
-                    url: url,
-                    data: form.serialize(),
-                    success: function(data) {
-                        // Ajax call completed successfully
-                        alert("Message Sent Successfully");
-                        submitOpen();
-                    },
-                    error:  function(data) {
-                                alert("Message failed to send. Please try again later.");
-                                submitOpen();
-                            }
-                });
-            });
-        });
+        window.addEventListener('resize', () => {
+        document.getElementById('projectLibraryHeader').style.marginTop = (headerHeight + 28) + 'px';
+        })
     </script>
 </body>
 </html>

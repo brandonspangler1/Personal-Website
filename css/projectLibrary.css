@@ -32,32 +32,21 @@ body::-webkit-scrollbar {
 button, .menuButton {
     cursor: pointer;
 }
-.projectLibrary_wrap {
-    max-width: 20000px;
-    height: 100%; 
-    margin: 0 auto;
-    display: grid;
-    grid-template-areas:
-        "nav"
-        "wTPL"
-        "allProj"
-        "footer";
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+
+.projectLibraryWrapper {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: center;
+    height: 100vh;
 }
 
 .allProjects_wrap {
+    flex: 1;
     grid-area: allProj;
-    max-width: 20000px;
-    height: 100%; 
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    grid-auto-columns: min-content;
-    grid-auto-rows: auto;
+    gap: 1rem;
     align-self: center;
     justify-self: center;
     padding: 0 0 1rem 0;
@@ -67,95 +56,6 @@ button, .menuButton {
     margin-top: 4rem;
     grid-area: wTPL;
 }
-
-.navi { 
-    grid-area: nav; 
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-
-}
-
-.header {
-    background: #051622;
-    position: fixed;
-    top: 0;
-    z-index: 3;
-    /* box-shadow: 0 1px 4px white; */
-    border-bottom: 1px solid #fffffaff;
-}
-
-.headerInfo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn_wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 30%;
-    margin-right: 8vw;
-}
-
-.btn_wrap a {
-    border: none;
-    background: none;
-    text-decoration: none;
-    color: #FEFEFE;
-    margin: 0 2vw;
-    opacity: 0.75;
-    font-size: 2.5rem;
-}
-
-.btn_wrap button {
-    border: none;
-    background: none;
-    text-decoration: none;
-    color: #FEFEFE;
-    margin: 0 2vw;
-    opacity: 0.75;
-    font-size: 2.5rem;
-}
-
-
-
-.menuBar {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.6s;
-}
-
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {
-    transform: rotate(45deg) translate(-1px, 1px);
-}
-
-.change .bar3 {
-  /* -webkit-transform: rotate(45deg) translate(-8px, -8px); */
-  transform:  translate(0, 8px);
-  opacity: 0;
-}
-
-.menuButton {
-    visibility: hidden;
-}
-
 
 
 .projectLibraryHeaderName {
@@ -170,8 +70,8 @@ button, .menuButton {
 }
 
 .projectBlock {
-    height: 17rem;
-    width: 17rem;
+    height: 20rem;
+    width: 20rem;
     background-color: grey;
     display: flex;
     flex-direction: row;
@@ -190,8 +90,8 @@ button, .menuButton {
 }
 
 .projectImage{
-    height: 17rem;
-    width: 17rem;
+    height: 20rem;
+    width: 20rem;
     object-fit: cover;
     position: absolute;
     z-index: 0;
@@ -200,11 +100,12 @@ button, .menuButton {
 
 
 .projectBlockTitles {
-    font-size: 2rem;
+    font-size: 3.5rem;
     z-index: 1;
     visibility: hidden;
     font-family: 'JetBrains Mono';
     color: white;
+    margin: 0;
 }
 
 .blackText {
@@ -212,7 +113,7 @@ button, .menuButton {
 }
 
 .projectBlock:hover .projectImage {
-    filter: blur(8px);
+    filter: blur(30px);
 }
 
 .projectBlock:hover .photoCodeLogo {
@@ -229,15 +130,8 @@ button, .menuButton {
     visibility: hidden;
 }
 
-.zeroMargin {
-    margin: 0;
-}
 .bottom {
     margin-bottom: 2rem;
-}
-
-.outline {
-    outline: 1rem solid black;
 }
 
 @media screen and (max-width: 600px) {

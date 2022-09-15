@@ -33,7 +33,7 @@
             <div class="btn_wrap" id="btn_wrap">
                 <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Home</button>
                 <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#projects'})">Projects</button>
-                <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#about'})">About Me</button>
+                <button class="headerBtns rightMostHeaderBtn" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#about'})">About Me</button>
                 <!-- <a href="#contact">Contact Me</a> -->
             </div> 
         
@@ -138,50 +138,16 @@
             </div>
         </div>
 
-        <!-- <div class="project_wrap">
-            <div class="des">
-                <h2 class="projectHeader">Macro Tracker</h2>
-                 <h3 class="projectLanguages">HTML CSS JavaScript MySQL PHP</h3> 
-                <p class="projectDes">
-                    This IOS app will be written in Swift, allowing you to track and record 
-                    calories and macronutrients. It will enable you to have a 
-                    healthy lifestyle while not feeling like a burden. 
-                </p>
-                 <div class="projectBtnWrapper">
-                    <a class="projectButton" href="https://www.brandonspangler.com/goatify">To Goatify</a>
-                    <a class="projectButton" href="https://github.com/jyrz13149/Music_Player">Code</a>
-                </div>
-            </div>
-
-            <div class="visual">
-                <image class="goatifyComputer" src="images/Goatify Markup.png"></image>
-            </div>
-
-            <div class="arrowWrap">
-                <h3 class="explore">Explore</h3>
-                <a class="arrow" href="">
-                    <article class="arrowPosition">
-                        <div class="arm"></div>
-                        <div class="bottom"></div>
-                        <div class="top"></div>
-                    </article>
-                </a>
-            </div>
-        </div> -->
-        
-        <!-- <div class="project3">
-            <h2>Macro Tracker</h2>
-            <h3>Swift MySQL PHP</h3>
-            <p>This is an IOS based food logging app.</p>
-        </div> -->
         <div class="projectLibraryWrapper">
-            <a class="toProjectLibraryHeader" href="projectLibrary.html">View Project Library</a>
+            <a class="toProjectLibraryHeader" href="projectLibrary.html">Project Library</a>
         </div>
 
     </section>
 
     <section class="about" id="about">
-        <h1 class="aboutHeader">About Me</h1>
+        <div>
+            <h1 class="aboutHeader" id="aboutHeader">About Me</h1>
+        </div>
 
         <div class="aboutWrapper">
             <div> 
@@ -197,21 +163,6 @@
             </p>
         </div>
     </section>
-
-    <!-- <section class="contact" id="contact">
-        <h1 class="contactHeader">Contact Me</h1>
-        
-        <div class="contact_input">
-            <label for="first_name">First Name</label>
-            <input type="text" id="first_name" name="first_name" placeholder="Brandon" required>
-
-            <label for="last_name">Last Name</label>
-            <input type="text" id="last_name" name="last_name" placeholder="Spangler" required>
-
-            <label for="content">Content of Message</label>
-            <input type="text" id="content" name="content" spellcheck="true" placeholder="Tacos" required>
-        </div>
-    </section> -->
 
     <footer class="footer" id="footer">
         <div class="contactMeWrapper">
@@ -276,18 +227,34 @@
         // gsap.set('#menuButton', {x: '-200%'});
 
         gsap.to("#projectTitle", {
-                scrollTrigger: {
-                    trigger: "#projects",
-                    start: "top bottom",
-                    endTrigger: "#projectTitle",
-                    end: "bottom center",
-                    // markers: true,
-                    scrub: true,
-                    toggleActions: "restart none none none",
-                },
-                x: 0,
-                // duration: 2,
-            });
+            scrollTrigger: {
+                trigger: "#projects",
+                start: "top bottom",
+                endTrigger: "#projectTitle",
+                end: "bottom center",
+                // markers: true,
+                scrub: true,
+                toggleActions: "restart none none none",
+            },
+            x: 0,
+            // duration: 2,
+        });
+
+        gsap.set('#aboutHeader', {left: '50%', top: '50%', xPercent:-50, yPercent:-50, y: 50, x: '200%'});
+
+        gsap.to("#aboutHeader", {
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top bottom",
+                endTrigger: "#aboutHeader",
+                end: "bottom center",
+                // markers: true,
+                scrub: true,
+                toggleActions: "restart none none none",
+            },
+            x: 0,
+            // duration: 2,
+        });
     </script>
 </body>
 </html>

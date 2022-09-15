@@ -72,6 +72,7 @@ button, .menuButton {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 4rem;
 }
 
 .intro {
@@ -179,30 +180,15 @@ button, .menuButton {
 
 .proj {
     grid-area: proj;
-    width: 90vw;
-    /* padding-top: 80px; */
+    padding: 0 4rem;
 }
 
 
 
 .about {
     grid-area: about;
-    width: 90vw;
+    padding: 0 4rem;
     margin-bottom: 10vw;
-}
-
-.aboutHeader {
-    margin-top: 0;
-    font-size: 6rem;
-    margin-bottom: 0;
-    text-align: center;
-    font-family: 'Glegoo', serif;
-    color: #FB8122;
-}
-
-.contact {
-    grid-area: contact;
-    width: 90vw;
 }
 
 .contactHeader {
@@ -262,9 +248,6 @@ button, .menuButton {
     width: 37.44rem;
 }
 
-.projectDescriptionWrapper {
-
-}
 
 .goatifyComputer {
     height: 20rem;
@@ -288,7 +271,7 @@ button, .menuButton {
     text-decoration: none;
     border: 0.25rem solid #738290;
     border-radius: 1rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem 8rem;
 }
 
 .toProjectLibraryHeader:hover {
@@ -306,6 +289,18 @@ button, .menuButton {
     background-color: #407899;
     background-color: #738290;
     box-shadow: 10px 5px 5px #254658;
+}
+
+.aboutHeader {
+    margin-top: 50px;
+    font-size: 6rem;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: 'Glegoo', serif;
+    color: #FB8122;
+    width: min-content;
+    white-space: pre;
+    position: relative;
 }
 
 .profilePicture {

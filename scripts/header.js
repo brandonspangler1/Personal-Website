@@ -66,7 +66,7 @@ headerNameTween = gsap.to("#headerName", {
             var windowWidth, sideMargin, headerPicWidth;
         
             windowWidth = window.innerWidth;
-            sideMargin = windowWidth * 0.02;
+            sideMargin = windowWidth * 0.04;
             
             
             headerNameWidth = headerName.offsetWidth;
