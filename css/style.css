@@ -372,6 +372,13 @@ button, .menuButton {
     }
     .main {
         justify-content: center;
+        padding: 0 2rem;
+    }
+    .proj {
+        padding: 0 2rem;
+    }
+    .about {
+        padding: 0 2rem;
     }
     .welcomeTitleWrapper{
         margin-top: 10vw;
@@ -428,6 +435,15 @@ button, .menuButton {
 @media screen and (max-width: 400px) {
     html {
         font-size: 2.5vw;
+    }
+    .main {
+        padding: 0 1rem;
+    }
+    .proj {
+        padding: 0 1rem;
+    }
+    .about {
+        padding: 0 1rem;
     }
     .welcomeTitle {
         font-size: 4rem;

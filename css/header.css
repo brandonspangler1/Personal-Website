@@ -238,13 +238,13 @@
         visibility: visible;
         position: relative;
         left: 0;
-        padding: 0 0 0 1rem;
+        padding: 0 0 0 2rem;
         z-index: 5;
     }
     .menuButton {
         position: relative; 
         visibility: visible;
-        padding: 0 1rem 0 0;
+        padding: 0 2rem 0 0;
     }
 
     .change .hamburgerMenu {
@@ -276,5 +276,14 @@
 
     .menuButton {
         z-index: 5;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .headerNameMobile {
+        padding: 0 0 0 1rem;
+    }
+    .menuButton {
+        padding: 0 1rem 0 0;
     }
 }
