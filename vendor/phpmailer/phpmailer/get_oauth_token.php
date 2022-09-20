@@ -74,7 +74,7 @@ require 'vendor/autoload.php';
 
 session_start();
 
-$providerName = 'Google';
+$providerName = '';
 $clientId = '';
 $clientSecret = '';
 
@@ -92,12 +92,12 @@ if (array_key_exists('provider', $_POST)) {
 }
 
 //If you don't want to use the built-in form, set your client id and secret here
-$clientId = '653475083162-jfrcfqlfe9qhm86nh5f89if3hktoh2e2.apps.googleusercontent.com';
-$clientSecret = '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';
+//$clientId = 'RANDOMCHARS-----duv1n2.apps.googleusercontent.com';
+//$clientSecret = 'RANDOMCHARS-----lGyjPcRtvP';
 
 //If this automatic URL doesn't work, set it yourself manually to the URL of this script
-// $redirectUri = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
-$redirectUri = 'https://brandonspangler.com/vendor/phpmailer/phpmailer/get_oauth_token.php';
+$redirectUri = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
+//$redirectUri = 'http://localhost/PHPMailer/redirect';
 
 $params = [
     'clientId' => $clientId,
