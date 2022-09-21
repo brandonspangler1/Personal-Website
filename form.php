@@ -37,7 +37,7 @@
         $clientId = "653475083162-jfrcfqlfe9qhm86nh5f89if3hktoh2e2.apps.googleusercontent.com";
         $clientSecret = "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";
 
-        $refreshToken = "1//0fqppLJswgqWCCgYIARAAGA8SNwF-L9Ir6iP1s_SUmwUp8WITPyQsXmH3O68AuTjYJKd04rvl1rjPWttzI_Oc5Ox42Y633sMEXYM";
+        $refreshToken = "1//0fhDwyd1YDINACgYIARAAGA8SNwF-L9IrxvM6IOZzMkw_ZJiMnCpOksHAf8MfnmRaTwjyeRhkW9ga4JVLeSOisvwiBCFZANN5yNQ";
 
         $provider = new Google(
             [
