@@ -1,13 +1,22 @@
+@font-face {
+    font-family: "Inter";
+    src: url("/assets/fonts/Inter/Inter_Variable.ttf") format("truetype");
+}
+
 .footer {
     grid-area: footer;
     background-color: #080628;
     background-color: #061926;
     background-color: #1f2833ff;
+    background-color: #12110D;
+    color: #FEF5F1;
     width: 100%;
     padding: 1rem 0 0 0;
     /* box-shadow: 0 -2px 4px #A9D5F2; */
     border-top: 1px solid white;
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'Inter', sans-serif;
+    /* font-weight: 300; */
 }
 
 .contactMeWrapper {
@@ -15,7 +24,7 @@
     /* flex-direction: column; */
     justify-content: space-between;
     /* width: fit-content; */
-    padding: 0 3rem;
+    padding: 0 4rem;
 }
 
 .socialIconWrapper {
@@ -23,11 +32,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    padding: 0 1rem 0 0;
 }
 
-.link1:hover, .link2:hover, .link3:hover{
+.link1:hover, .link2:hover, .link3:hover, .link4:hover{
     color: #FB8122;
+    color: #EF4F1F;
 }
 
 .socialIconLink {
@@ -36,13 +45,14 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #fffffaff;
+    color: #FEF5F1;
     padding: 0.25rem 0;
 }
 
 .socialName {
     margin: 0;
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 1.5rem;
     padding: 0 0.25rem 0 0;
 }
 
@@ -56,12 +66,14 @@
     background-color: black;
     display: flex;
     justify-content: space-between;
-    padding: 0 3rem 0 3rem;
+    padding: 0 4rem;
 }
 
 .contactMeHeader {
-    margin: 0.25rem 0;
-    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    padding: 0 1rem 0 0;
+    font-weight: 400;
+    font-size: 1.5rem;
     text-align: center;
     /* font-family: 'Verdana', sans-serif; */
 }
@@ -80,48 +92,71 @@
     flex-direction: column;
     align-items: center;
     padding: 0 1rem;
-    
+}
+
+.firstHeaderInput {
+    padding-left: 0;
+}
+
+.headerInput label {
+    padding: 0 0 0.5rem 0;
+    font-weight: 300;
 }
 
 .headerInput input {
     width: 10rem;
     border-radius: 0.2rem;
     border: none;
+    font-size: 0.75rem;
 }
 
 .emailMessage {
-    padding: 0 1rem;
+    padding: 0 1rem 0 0;
+    margin: 1rem 0;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
 }
 
 .emailMessage label {
-    padding: 0.2rem 0;
+    padding: 0 0 0.5rem 0;
+    font-weight: 300;
+    text-align: center;
 }
 
 .emailMessage textarea {
     margin: 0;
     border-radius: 0.2rem;
     border: none;
+    font-size: 0.75rem;
 }
 
 .emailSubmit {
-    padding: 0 1rem;
     display: flex;
     justify-content: center;
-    padding: 0.5rem 0 1rem 0;
-    /* cursor: pointer; */
+    padding: 0 1rem 0 0;
+    margin: 1rem 0;
 }
 
 .emailSubmit input {
     background: none;
     color: #239DFB;
+    color: #EF4F1F;
     border-radius: 0.5rem;
     border: 0.2rem solid #738290;
+    border: 0.15rem solid #00678F;
     font-size: 1rem;
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
+    font-weight: 300;
+    padding: 0.25rem 2rem;
     cursor: pointer;
+}
+
+.emailSubmit input:hover {
+    /* font-weight: 500; */
+    background-color: #FEF5F1;
+    color: #12110D;
+    border: 0.15rem solid #EF4F1F;
 }
 
 .copyright, .websiteCode {
@@ -129,11 +164,12 @@
     font-size: 1rem;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 400;
-    color: lightgrey;
+    color: #FEF5F1;
 }
 
 .websiteCode {
     color: #239DFB;
+    /* color: #00678F; */
     text-decoration: none;
 }
 

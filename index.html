@@ -31,9 +31,10 @@
 
         <!-- <div class="menuBar" id="menuBar"> -->
             <div class="btn_wrap" id="btn_wrap">
-                <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Home</button>
-                <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#projects'})">Projects</button>
-                <button class="headerBtns rightMostHeaderBtn" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#about'})">About Me</button>
+                <!-- <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Home</button> -->
+                <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#projects', offsetY: headerHeight}})">Projects</button>
+                <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#about', offsetY: headerHeight}})">About Me</button>
+                <button class="headerBtns rightMostHeaderBtn" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#footer'}})">Contact Me</button>
                 <!-- <a href="#contact">Contact Me</a> -->
             </div> 
         
@@ -47,7 +48,7 @@
                 <div class="hamburgerMenu" id="hamburgerMenu">
                     <button class="hamburgerBtns" id="firstHamburgerButton" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'}), menuTransform(menuButton)">Home</button>
                     <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#projects'}), menuTransform(menuButton)">Projects</button>
-                    <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#about'}), menuTransform(menuButton)">About Me</button>
+                    <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#about', offsetY: 0}}), menuTransform(menuButton)">About Me</button>
                     <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#footer'}), menuTransform(menuButton)">Contact Me</button>
                     <a class="hamburgerBtns" href="assets/Resume.pdf">Resume</a>
                     <a class="hamburgerBtns" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">LinkedIn</a>
@@ -58,35 +59,17 @@
     </header>
 
     <section class="main" id="home">
-        <!-- <div class="intro"> -->
-            <!-- <div class="welcomeSections"> -->
-                <div class="welcomeTitleWrapper">
-                    <h1 class="welcomeTitle orange">
-                        Hello
-                    </h1>
-                    <h1 class="welcomeTitle">
-                        , I'm Brandon
-                    </h1>
-                </div>
-                <h2 class="welcomeMssg">
-                    Full-Stack Developer and student at University of Central Florida
-                </h2>
-            <!-- </div> -->
-        <!-- </div> -->
+        <h1 class="welcomeTitle"><span class="orange">Hello</span>, I'm Brandon</h1>
+
+        <h2 class="welcomeBuzz">
+            Full-Stack Developer and University of Central Florida Senior
+        </h2>
 
         <div class="welcomeBtnWrapper">
             <a class="resumeBtn" href="assets/Resume.pdf">Resume</a>
             <a class="resumeBtn" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">LinkedIn</a>
             <a class="resumeBtn" href="https://github.com/brandonspangler2">GitHub</a>
-        </div>
-       
-  
-
-        <!-- <div class="welcomeBtnWrapper projectBtnColumn">
-            <a class="welcomeBtn" href="">Resume</a>
-            <button class="projectBtn" onClick="gsap.to(window, {duration: 1.5, scrollTo: '#projects'})"><p class="projArrow">Projects</p><p class="projArrow arrowVertical">|</p><p class="projArrow arrowVertical">|</p><p class="projArrow arrowVertical">v</p></button>
-        </div> -->
-        
+        </div>        
     </section>
 
     <section class="proj" id="projects">
@@ -170,7 +153,7 @@
                 <h1 class="contactMeHeader">Contact me</h1>
                 <form action="form.php" method="POST" class="contactForm" id="contactForm">
                     <div class="emailHeaders">
-                        <div class="headerInput">
+                        <div class="headerInput firstHeaderInput">
                             <label for="name">Name</label>
                             <input type="name" name="name" id="name" required>
                         </div>
@@ -208,6 +191,11 @@
                     <h3 class="socialName">Discord</h3>
                     <img  class="socialIcon"
                         src="assets/images/Discord-Logo-White.png">
+                </a>
+                <a class="socialIconLink link4" href="assets/Resume.pdf">
+                    <h3 class="socialName">Resume</h3>
+                    <img  class="socialIcon"
+                        src="assets/images/download_icon_white.png">
                 </a>
             </div>
         </div>
@@ -255,6 +243,15 @@
             x: 0,
             // duration: 2,
         });
+
+        var headerHeight = document.getElementById("header").offsetHeight + 28;
+        // console.log(headerHeight);
+        document.getElementById('about').style.marginTop = (headerHeight) + 'px';
+
+        window.addEventListener('resize', () => {
+            headerHeight = document.getElementById("header").offsetHeight + 28;
+            document.getElementById('about').style.marginTop = (headerHeight) + 'px';
+        })
     </script>
 </body>
 </html>

@@ -1,15 +1,23 @@
 /*
 Colors: 
---rich-black-fogra-29: #061926;
---gunmetal: #1f2833;
---princeton-orange: #fb8122;
---baby-powder: #fffffa;
---slate-gray: #738290;
+    - black: #000000
+    - smoky black: #12110D
+    - black coffee (dark grey): #373238
+    - flame (orange): #EF4F1F
+    - blue sapphire: #00678F
+    - seashell (cream): #FEF5F1
 */
 
+/* || General Styles */
+/* #region */
 @font-face {
     font-family: "JetBrains Mono";
     src: url("/assets/fonts/JetBrainsMono/fonts/webfonts/JetBrainsMono-Regular.woff2") format("woff2");
+}
+
+@font-face{
+    font-family: "Inter";
+    src: url("/assets/fonts/Inter/Inter_Variable.ttf") format("truetype");
 }
 
 html {
@@ -27,9 +35,13 @@ body {
     background: #A0AECD;
     background: #051622;
     background: #061926;
+    background: #000000;
+    /* background: #12110D; */
+    /* background: #373238; */
     /* background: #14213d; */
     /* background: #add; */
     color: #fffffa;
+    color: #FEF5F1;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -45,7 +57,9 @@ body::-webkit-scrollbar {
 button, .menuButton {
     cursor: pointer;
 }
+/* #endregion */
 
+/* || Grid Setup */
 .grid_wrap {
     max-width: 20000px;
     height: 100%; 
@@ -64,6 +78,8 @@ button, .menuButton {
     justify-items: center;
 }
 
+/* || Main Section */
+/* #region */
 .main { 
     grid-area: main; 
     margin-top: auto;
@@ -84,18 +100,8 @@ button, .menuButton {
     width: 100%;
 }
 
-.welcomeTitleWrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    /* margin-top: 20vh; */
-}
-
 .welcomeTitle {
-    /* white-space: pre; */
-    /* margin-top: 20vh; */
-    display: flex;
-    justify-content: center;
+    text-align: center;
     font-family: 'Roboto Slab', serif;
     font-size: 6rem;
     margin: 0;
@@ -103,14 +109,13 @@ button, .menuButton {
 
 .orange {
     color: #FB8122;
+    color: #EF4F1F;
 }
 
-
-
-
-.welcomeMssg {
-    font-family: 'Roboto Slab', serif;
-    font-size: 2.5rem;
+.welcomeBuzz {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 2.75rem;
     text-align: center;
 }
 
@@ -127,8 +132,9 @@ button, .menuButton {
 
 .resumeBtn {
     text-decoration: none;
-    /* background-color: gray; */
+    background-color: #12110D;
     color: #239DFB;
+    color: #FEF5F1;
     border-radius: 1rem;
     font-size: 2.5rem;
     font-family: 'Titillium Web', sans-serif;
@@ -137,6 +143,13 @@ button, .menuButton {
     margin: 10px 2rem;
     /* opacity: 0.75; */
     border: 0.25rem solid #738290;
+    border: 0.25rem solid #F5865C;
+    border: 0.25rem solid #EF4F1F;
+    border: 0.25rem solid #00678F; 
+}
+
+.resumeBtn:hover {
+    color: #EF4F1F; 
 }
 
 
@@ -151,52 +164,13 @@ button, .menuButton {
     width: min-content;
     margin: 10px 0;
 }
+/* #endregion */
 
-.projectBtn {
-    text-decoration: none;
-    background: none;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    font-family: 'Titillium Web', sans-serif;
-    padding: 5px 10px;
-    width: min-content;
-    margin: 10px 0;
-    border: none;
-    color: #2CCCC3;
-}
-
-
-.projArrow {
-    margin: 0;
-}
-
-.arrowVertical {
-    text-align: center;
-    font-size: 15px;
-    margin: -4px;
-}
-
-
-
+/* || Project Showcase */
+/* #region */
 .proj {
     grid-area: proj;
     padding: 0 4rem;
-}
-
-
-
-.about {
-    grid-area: about;
-    padding: 0 4rem;
-    margin-bottom: 10vw;
-}
-
-.contactHeader {
-    margin-top: 80px;
-    font-size: 6vw;
-    margin-bottom: 0;
-    text-align: center;
-    font-family: 'Glegoo', serif;
 }
 
 .projectTitle {
@@ -204,24 +178,11 @@ button, .menuButton {
     margin-bottom: 0;
     font-size: 6rem;
     width: min-content;
-    /* visibility: hidden; */
     font-family: 'Glegoo', serif;
     white-space: pre;
     color: #FB8122;
+    color: #EF4F1F;
     position: relative;
-}
-
-.projectHeader {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    font-family: 'Roboto Slab', serif;
-    margin: 0;
-}
-
-.projectDes {
-    font-size: 1.5rem;
-    font-family: 'Titillium Web', sans-serif;
-    margin: 2rem;
 }
 
 .project_wrap {
@@ -235,7 +196,8 @@ button, .menuButton {
     /* background-color: #FEFEFE; */
     /* background-color: #D7D9CE; */
     background-color: #e1e2e2;
-    color: black;
+    background-color: #373238;
+    /* color: black; */
 }
 
 .projectOverviewWrapper {
@@ -243,78 +205,17 @@ button, .menuButton {
     margin-bottom: 2rem;
 }
 
-.photoCodeSpread {
-    height: 24rem; 
-    width: 37.44rem;
-}
-
-
-.goatifyComputer {
-    height: 20rem;
-    border-radius: 5px;
-}
-
-.projectLibraryWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.toProjectLibraryHeader {
-    margin-top: 0px;
+.projectHeader {
     font-size: 4rem;
-    width: min-content;
+    margin-bottom: 20px;
     font-family: 'Glegoo', serif;
-    white-space: pre;
-    color: #239DFB;
-    cursor: pointer;
-    text-decoration: none;
-    border: 0.25rem solid #738290;
-    border-radius: 1rem;
-    padding: 1rem 8rem;
+    margin: 0;
 }
 
-.toProjectLibraryHeader:hover {
-    text-decoration: underline;
-}
-
-
-.aboutWrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    border-radius: 2px;
-    background-color: #407899;
-    background-color: #738290;
-    box-shadow: 10px 5px 5px #254658;
-}
-
-.aboutHeader {
-    margin-top: 50px;
-    font-size: 6rem;
-    margin-bottom: 0;
-    text-align: center;
-    font-family: 'Glegoo', serif;
-    color: #FB8122;
-    width: min-content;
-    white-space: pre;
-    position: relative;
-}
-
-.profilePicture {
-    height: 18rem;
-    width: 18rem;
-    border: 2px solid #0b0c10ff;
-    /* border-radius: 300px; */
-    margin: 30px;
-}
-
-.aboutText {
+.projectDes {
     font-size: 1.5rem;
     font-family: 'Titillium Web', sans-serif;
-    margin: 0 20px;
+    margin: 2rem;
 }
 
 .arrowWrap {
@@ -326,7 +227,6 @@ button, .menuButton {
 }
 
 .explore {
-    /* transform: translate(-7rem, 0); */
     font-family: "JetBrains Mono";
     font-size: 1.5rem;
     margin-right: 1rem;
@@ -344,27 +244,90 @@ button, .menuButton {
     margin-right: 1rem;
 }
 
-.photoCodePhone {
-    height: 20rem;
-    transform: translate(-32rem, -1rem);
-}
-.photoCodeComputer {
-    /* z-index: -1; */
-    height: 20rem;
-    transform: translate(3rem, 1rem);
-    
+.photoCodeSpread {
+    height: 24rem; 
+    width: 37.44rem;
 }
 
+.goatifyComputer {
+    height: 20rem;
+    border-radius: 5px;
+}
 
-.visual {
-    grid-area: visual;
+.projectLibraryWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toProjectLibraryHeader {
+    background-color: #12110D;
+    color: #239DFB;
+    color: #FEF5F1;
+    margin-top: 0px;
+    padding: 1rem 8rem;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 4rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    border: 0.25rem solid #738290;
+    border: 0.25rem solid #00678F;
+}
+
+.toProjectLibraryHeader:hover {
+    color: #EF4F1F; 
+    /* background-color: #FEF5F1; */
+}
+/* #endregion */
+
+/* || About Section */
+/* #region */
+.about {
+    grid-area: about;
+    padding: 0 4rem;
+    margin-bottom: 10vw;
+}
+
+.aboutWrapper {
     display: flex;
     flex-direction: row;
-    /* width: ; */
-    max-width: 40vw;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    border-radius: 0.5rem;
+    background-color: #407899;
+    background-color: #738290;
+    background-color: #373238;
+    color: #FEF5F1;
 }
 
+.aboutHeader {
+    margin-top: 50px;
+    font-size: 6rem;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: 'Glegoo', serif;
+    color: #FB8122;
+    color: #EF4F1F;
+    width: min-content;
+    white-space: pre;
+    position: relative;
+}
 
+.profilePicture {
+    height: 18rem;
+    width: 18rem;
+    border: 0.15rem solid #00678F;
+    border-radius: 0.1rem;
+    margin: 30px;
+}
+
+.aboutText {
+    font-size: 1.5rem;
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0 20px;
+}
+/*  #endregion */
 
 @media screen and (max-width: 600px) {
     html {

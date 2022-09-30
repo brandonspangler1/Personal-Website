@@ -17,12 +17,11 @@ html {
 body {
     background: #A0AECD;
     background: #051622;
-    color: #fffffa;
+    background: #000000;
+    color: #FEF5F1;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
-    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -42,19 +41,14 @@ button, .menuButton {
 
 .allProjects_wrap {
     flex: 1;
-    grid-area: allProj;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    align-self: center;
-    justify-self: center;
     padding: 0 0 1rem 0;
 }
 
 .welcomeProjectLibrary {
     margin-top: 4rem;
-    grid-area: wTPL;
 }
 
 
