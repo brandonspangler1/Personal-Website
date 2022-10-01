@@ -3,6 +3,7 @@ Colors:
     - black: #000000
     - smoky black: #12110D
     - black coffee (dark grey): #373238
+    - coral: #F5865C
     - flame (orange): #EF4F1F
     - blue sapphire: #00678F
     - seashell (cream): #FEF5F1
@@ -231,7 +232,6 @@ button, .menuButton {
     font-size: 1.5rem;
     margin-right: 1rem;
     margin-top: 1rem;
-   
 }
 
 .arrow:hover {
