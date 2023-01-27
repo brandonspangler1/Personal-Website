@@ -1,0 +1,77 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #000000;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrap {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+header div {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-family: 'Solway', serif;
+    font-weight: 300;
+}
+
+.title {
+    display: block;
+    text-align: center;
+}
+
+header button {
+    background: none;
+    border: none;
+}
+
+header button img {
+    width: 25%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.column:nth-of-type(odd) {
+    flex: 3;
+}
+
+h2 {
+    text-align: center;
+}
+
+.btns {
+    background: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    margin: 15px;
+}

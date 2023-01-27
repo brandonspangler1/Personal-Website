@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+header div.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1400px;
+  margin: 20px;
+}
+
+header div.header button {
+  background-color: transparent;
+  border: none;
+}
+
+header div.header button img {
+  max-width: 50px;
+  width: 70%;
+}
+
+header div.header h1,
+header div.header h2 {
+  text-align: center;
+}
+
+div.university_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+div.university_info div.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+div.university_info div.description label {
+  font-size: 31px;
+  margin: auto;
+}
+
+div.university_info div.description h3 {
+  width: 500px;
+  height: 120px;
+  background-color: lightgray;
+  color: black;
+  border: none;
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 550;
+  font-size: 24px;
+  outline: none;
+  margin: auto;
+  margin-bottom: 10px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+div.university_info div.description img {
+  width: 500px;
+  height: 250px;
+}
+
+div.private {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  margin: auto;
+  margin-left: 50px;
+  width: 700px;
+  height: 430px;
+}
+
+div.private label {
+  font-size: 31px;
+  margin: auto;
+}
+
+div.private div.lists {
+  width: 700px;
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  direction: rtl;
+  background-color: lightgray;
+}
+
+div.private div.lists table {
+  background-color: transparent;
+  width: 550px;
+  height: 35px;
+  border: none;
+  margin: auto;
+}
+
+div.private div.lists table tr.names {
+  background-color: transparent;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-color: lightgray;
+}
+
+div.private div.lists table tr.names td {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  width: 670px;
+}
+
+div.private div.lists table tr.names td a {
+  border-radius: 45px;
+  background-color: lightgray;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  width: auto;
+  text-align: center;
+  padding: 5px 5px;
+  margin-right: 5px;
+}
+
+div.private div.lists table tr.names td button.event_info {
+  border-radius: 15px;
+  border-color: transparent;
+  border-width: 5px;
+  background-color: transparent;
+  font-size: 22px;
+  font-weight: bold;
+  width: auto;
+  max-width: 300px;
+  height: auto;
+  max-height: 100px;
+  text-align: center;
+  padding: 5px 5px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+div.private div.lists div.no_private {
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+div.private div.lists div.no_private h3 {
+  font-size: 50px;
+}
+
+div.profile_buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+div.profile_buttons div.create,
+div.profile_buttons div.view,
+div.profile_buttons div.edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.profile_buttons div.create button,
+div.profile_buttons div.view button,
+div.profile_buttons div.edit button {
+  border-radius: 15px;
+  border-color: black;
+  border-width: 5px;
+  background-color: lightgray;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 10px;
+  width: auto;
+  height: auto;
+  margin: 10px;
+}

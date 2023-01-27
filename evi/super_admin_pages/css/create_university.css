@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+header div.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1400px;
+  margin: 20px;
+  margin-bottom: 20px;
+}
+
+header div.header button {
+  background-color: transparent;
+  border: none;
+}
+
+header div.header button img {
+  max-width: 50px;
+  width: 70%;
+}
+
+header div.header h1 {
+  text-align: center;
+}
+
+div.create_university {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+div.create_university div.university_description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+div.create_university div.university_description div.basic_information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-right: 90px;
+  margin-left: 50px;
+}
+
+div.create_university div.university_description div.describe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-left: 90px;
+}
+
+div.create_university div.university_description div.basic_information label,
+div.create_university div.university_description div.describe label {
+  font-size: 31px;
+  margin: auto;
+}
+
+div.create_university div.university_description div.basic_information input {
+  width: 400px;
+  height: 60px;
+  background-color: lightgray;
+  color: black;
+  border: none;
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 550;
+  font-size: 28px;
+  outline: none;
+  margin: auto;
+}
+
+div.create_university div.university_description div.describe textarea {
+  width: 600px;
+  height: 320px;
+  background-color: lightgray;
+  color: black;
+  border: none;
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 550;
+  font-size: 24px;
+  outline: none;
+  margin: auto;
+}
+
+div.create_university div.add_picture {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+div.create_university div.add_picture div.picture_name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+div.create_university div.add_picture div.picture_link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+div.create_university div.add_picture div.picture_name label,
+div.create_university div.add_picture div.picture_link label {
+  font-size: 31px;
+  margin: auto;
+}
+
+div.create_university div.add_picture div.picture_name input,
+div.create_university div.add_picture div.picture_link input {
+  width: 400px;
+  height: 60px;
+  background-color: lightgray;
+  color: black;
+  border: none;
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 550;
+  font-size: 28px;
+  outline: none;
+  margin: auto;
+}
+
+div.create_university form button {
+  width: 250px;
+  height: 80px;
+  font-size: 40px;
+  font-weight: 550;
+  font-style: 15px;
+  background-color: lightgray;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 45px;
+  outline: none;
+  margin: auto;
+}

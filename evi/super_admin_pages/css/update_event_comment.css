@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+header div.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1400px;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+header div.header button {
+  background-color: transparent;
+  border: none;
+}
+
+header div.header button img {
+  max-width: 50px;
+  width: 70%;
+}
+
+header div.header h1,
+header div.header h2 {
+  text-align: center;
+}
+
+div.update_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+div.update_form form div.heading {
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+div.update_form form div.heading h3 {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+div.update_form form div.view_comments {
+  margin: auto;
+  background-color: blue;
+  margin-bottom: 10px;
+  width: 700px;
+  height: auto;
+  max-height: 150px;
+  font-size: 24px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+div.update_form form input[type="text"] {
+  text-align: center;
+  width: 400px;
+  height: 70px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid blue;
+  border-radius: 0;
+  padding: 5px 0;
+  font-weight: 550;
+  font-size: 28px;
+  outline: none;
+  color: white;
+}
+
+div.update_form form input[type="submit"] {
+  width: 200px;
+  height: 60px;
+  font-size: 28px;
+  font-weight: 550;
+  font-style: 15px;
+  background-color: gold;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 45px;
+  outline: none;
+  margin: 20px;
+}

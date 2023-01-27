@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: auto;
+    width: auto;
+    background-color: #4A4A4A;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #4A4A4A;
+    color: #eee;
+}
+
+
+/* .university_info {
+    width: 100%;
+    height: 100%;
+    background-color: #4A4A4A;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ */
+
+.header {
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(204, 125, 51);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.header button {
+    background: none;
+    border: none;
+}
+
+.header button img {
+    width: 25%;
+}
+
+.header h1 {
+    font-size: 3vw;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    cursor: none;
+}
+
+.header h2 {
+    font-size: 1vw;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    margin: 1 0;
+}
+
+.desInfo label {
+    font-size: 400%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.privInfo label {
+    font-size: 400%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.private h3 {
+    width: 100%;
+    height: 160px;
+    background-color: lightgray;
+    color: black;
+    border: none;
+    border: 3px solid lightblue;
+    border-radius: 10px;
+    padding: 10px 10px;
+    font-weight: 550;
+    font-size: 24px;
+    outline: none;
+    margin: auto;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+div.university_info div.description img {
+    width: 20%;
+    height: 20%;
+    margin: 3% 40%;
+    border: 10px solid black;
+    border-radius: 30px;
+}
+
+.private {
+    display: flex;
+    /*     flex-direction: column; */
+    align-items: center;
+    background-color: transparent;
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    height: 100%;
+}
+
+.desInfo {
+    padding: 1rem;
+    width: 50%;
+}
+
+.privInfo {
+    padding: 1rem;
+    width: 50%;
+}
+
+.lists {
+    height: 20rem;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    direction: rtl;
+    background-color: lightgray;
+    overflow-y:scroll;
+}
+
+.lists table {
+    background-color: transparent;
+    width: 550px;
+    height: 35px;
+    border: none;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.lists table tr.names {
+    background-color: transparent;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-color: lightgray;
+}
+
+.names td {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    width: 45vw;
+}
+
+.names a {
+    border-radius: 45px;
+    background-color: lightgray;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    width: auto;
+    text-align: center;
+    padding: 5px 5px;
+    margin-right: 5px;
+}
+
+.event_info {
+    width: 9vw;
+    height: 100%;
+    border-radius: 15px;
+    border-color: transparent;
+    border-width: 5px;
+    background-color: transparent;
+    font-size: 100%;
+    font-weight: bold;
+    height: auto;
+    max-height: 100px;
+    text-align: center;
+    padding: 5px 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.profile buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+div.profile_buttons div.create,
+div.profile_buttons div.view,
+div.profile_buttons div.edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.profile_buttons div.create button,
+div.profile_buttons div.view button,
+div.profile_buttons div.edit button {
+    border-radius: 15px;
+    border-color: black;
+    border-width: 5px;
+    background-color: lightgray;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 10px;
+    width: auto;
+    height: auto;
+    margin: 10px;
+}

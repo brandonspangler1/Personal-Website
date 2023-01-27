@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+header div.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1400px;
+  margin: 20px;
+}
+
+header div.header button {
+  background-color: transparent;
+  border: none;
+}
+
+header div.header button img {
+  max-width: 50px;
+  width: 70%;
+}
+
+header div.header h1 {
+  text-align: center;
+}
+
+div.public_request {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+div.public_request div.first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  margin-right: 20px;
+}
+
+div.public_request div.first label {
+  font-size: 31px;
+  margin: auto;
+}
+
+div.public_request div.first h4 {
+  width: auto;
+  height: 60px;
+  background-color: lightgray;
+  color: black;
+  border: none;
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 550;
+  font-size: 26px;
+  outline: none;
+  margin: auto;
+  margin-bottom: 10px;
+  text-align: center;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+div.public_request div.second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+div.public_request div.second label {
+  font-size: 31px;
+  margin: auto;
+}
+
+div.public_request div.second h3 {
+  width: 500px;
+  height: 320px;
+  background-color: lightgray;
+  color: black;
+  border: none;
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 550;
+  font-size: 24px;
+  outline: none;
+  margin: auto;
+  margin-bottom: 40px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+div.public_request div.second div.third {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+
+div.public_request div.second div.third div.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  margin-right: 20px;
+}
+
+div.public_request div.second div.third div.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  margin-left: 20px;
+}
+
+div.public_request div.second div.third div.date label,
+div.public_request div.second div.third div.time label {
+  font-size: 31px;
+  margin: auto;
+}
+
+div.public_request div.second div.third div.date h4 {
+  width: 250px;
+  height: 60px;
+  background-color: lightgray;
+  color: black;
+  border: none;
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 550;
+  font-size: 26px;
+  outline: none;
+  margin: auto;
+  margin-bottom: 10px;
+  text-align: center;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+div.public_request div.second div.third div.time h4 {
+  width: 250px;
+  height: 60px;
+  background-color: lightgray;
+  color: black;
+  border: none;
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 550;
+  font-size: 26px;
+  outline: none;
+  margin: auto;
+  margin-bottom: 10px;
+  text-align: center;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+div.public_request div.fourth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+
+div.public_request div.fourth label {
+  font-size: 31px;
+  margin: auto;
+}
+
+div.public_request div.fourth h4 {
+  width: auto;
+  max-width: 300px;
+  height: 60px;
+  background-color: lightgray;
+  color: black;
+  border: none;
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 550;
+  font-size: 26px;
+  outline: none;
+  margin: auto;
+  margin-bottom: 10px;
+  text-align: center;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+div.public_request div.fourth a {
+  width: auto;
+  height: 60px;
+  background-color: lightgray;
+  color: blue;
+  border: none;
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 550;
+  font-size: 26px;
+  outline: none;
+  margin: auto;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+div.decision form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-left: 1035px;
+  margin-top: -100px;
+}
+
+div.decision form button {
+  width: 160px;
+  height: 70px;
+  font-size: 25px;
+  font-weight: 550;
+  font-style: 15px;
+  background-color: lightgray;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 45px;
+  outline: none;
+  margin: auto;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: auto;
+    width: auto;
+    background-color: #4A4A4A;
+}
+
+
+/* .rso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+    margin: auto;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    padding: 10px 10px;
+} */
+
+.header {
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(204, 125, 51);
+    color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.header button {
+    background-color: transparent;
+    border: none;
+}
+
+.header button img {
+    width: 25%;
+}
+
+.header h1 {
+    font-size: 4vw;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    cursor: none;
+}
+
+.header h3 {
+    font-size: 2vw;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    margin: 1 0;
+}
+
+div.rso div.lists {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    border-radius: 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    direction: ltr;
+    background-color: transparent;
+    padding: 10px 10px;
+    margin: auto;
+    text-align: center;
+}
+
+div.rso div.lists table {
+    background-color: gray;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    border: none;
+    margin: auto;
+}
+
+div.rso div.lists table tr.names {
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-color: gray;
+    padding: 10px 10px;
+    width: 880px;
+    height: auto;
+}
+
+div.rso div.lists table tr.names td {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+}
+
+div.rso div.lists table tr.names td button.event_info {
+    background-color: transparent;
+    padding: 10px 10px;
+    border: none;
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin: auto;
+}
+
+div.join_rso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+}
+
+div.join_rso form input[type="text"] {
+    text-align: center;
+    width: 50vw;
+    height: 70px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #eee;
+    border-radius: 0;
+    padding: 1% 0;
+    font-weight: 550;
+    font-size: 2vw;
+    outline: none;
+    color: white;
+}
+
+div.join_rso form input[type="submit"] {
+    width: 50%;
+    height: 50%;
+    font-size: 3vw;
+    font-weight: 550;
+    font-style: 15px;
+    background-color: rgb(204, 125, 51);
+    color: #4A4A4A;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 45px;
+    outline: none;
+    margin: 3%;
+}

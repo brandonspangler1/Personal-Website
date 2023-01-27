@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #4A4A4A;
+}
+
+.navigationBar {
+    width: 100%;
+    height: 12rem;
+    background-color: rgb(204, 125, 51);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.Title button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.logoutButton button img {
+    max-width: 100px;
+    width: 70%;
+    color: #000;
+}
+
+.logoutButton button {
+    background: none;
+    border: none;
+}
+
+.Title h1 {
+    font-size: 5rem;
+    color: #eee;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.Title h2 {
+    font-size: 3rem;
+    color: #eee;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    margin: 1 0;
+}
+
+.buttons {
+    width: 30%;
+    height: 102%;
+}
+
+.buttons button {
+    width: 60%;
+    font-weight: 400;
+    letter-spacing: 0.09rem;
+    font-size: 170%;
+    color: white;
+    background-color: #4A4A4A;
+    border-radius: 200px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 3%;
+    cursor: pointer;
+}
+
+.month {
+    width: 30%;
+    height: 45%;
+    background-color: #4A4A4A;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.month h1 {
+    font-size: 80%;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.2rem;
+    color: #eee;
+}
+
+.month div {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.prev-month button {
+    font-size: 100%;
+    font-weight: 400;
+    color: white;
+    height: 5rem;
+    background-color: transparent;
+    border: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    /* color: #4A4A4A; */
+}
+
+.next-month button {
+    font-size: 100%;
+    font-weight: 400;
+    color: white;
+    height: 5rem;
+    background-color: transparent;
+    border: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    /* color: #4A4A4A; */
+}
+
+.eventList {
+    width: 100%;
+    height: 20%;
+}
+
+.eventList h1 {
+    color: white;
+    font-size: 400%;
+    margin: 1%;
+}
+
+.publicEvents {
+    width: 97%;
+    height: 140%;
+    font-size: 1.5vw;
+    padding: 1%;
+    margin: 2%;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    text-align: center;
+    border: 1rem solid #1b1b1b;
+    border-radius: 20px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.privateEvents {
+    width: 97%;
+    height: 140%;
+    font-size: 1.5vw;
+    padding: 1%;
+    margin: 2%;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    text-align: center;
+    border: 1rem solid #1b1b1b;
+    border-radius: 20px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.PUeventType p {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    display: inline;
+}
+
+.PUtimeList p {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    display: inline;
+}
+
+.PUlocationList p {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    display: inline;
+}
+
+.PUmoreInfoList p {
+    margin-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.PUmoreInfoList button {
+    background: transparent;
+    font-size: 1.5vw;
+    border: none;
+}
+
+.PUmoreInfoList button:hover {
+    cursor: pointer
+}
+
+.PReventType p {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    display: inline;
+}
+
+.PRtimeList p {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    display: inline;
+}
+
+.PRlocationList p {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    display: inline;
+}
+
+.PRmoreInfoList p {
+    margin-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.PRmoreInfoList button {
+    background: transparent;
+    font-size: 1.5vw;
+    border: none;
+}
+
+.PRmoreInfoList button:hover {
+    cursor: pointer
+}
+
+.RSOeventType p {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    display: inline;
+}
+
+.RSOtimeList p {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    display: inline;
+}
+
+.RSOlocationList p {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    display: inline;
+}
+
+.RSOmoreInfoList p {
+    margin-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.RSOmoreInfoList button {
+    background: transparent;
+    font-size: 1.5vw;
+    border: none;
+}
+
+.RSOmoreInfoList button:hover {
+    cursor: pointer
+}

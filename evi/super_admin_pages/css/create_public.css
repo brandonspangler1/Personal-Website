@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+header div.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1400px;
+  margin: 20px;
+  margin-bottom: 30px;
+}
+
+header div.header button {
+  background-color: transparent;
+  border: none;
+}
+
+header div.header button img {
+  max-width: 50px;
+  width: 70%;
+}
+
+header div.header h1 {
+  text-align: center;
+}
+
+div.create_public_event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1300px;
+  height: 550px;
+}
+
+div.create_public_event form div.event_info {
+  display: flex;
+  flex-direction: row;
+}
+
+div.create_public_event form div.event_info div.basic {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-right: 50px;
+}
+
+div.create_public_event form div.event_info div.advanced {
+  margin-left: 50px;
+}
+
+div.create_public_event form div.event_info div.basic label,
+div.create_public_event form div.event_info div.describe label,
+div.create_public_event form div.event_info div.advanced label {
+  font-size: 31px;
+  margin: auto;
+}
+
+div.create_public_event form div.event_info div.basic input {
+  width: 300px;
+  height: 45px;
+  background-color: lightgray;
+  color: black;
+  border: none;
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 550;
+  font-size: 22px;
+  outline: none;
+  margin: auto;
+}
+div.create_public_event form div.event_info div.advanced input {
+  width: 300px;
+  height: 45px;
+  background-color: lightgray;
+  color: black;
+  border: none;
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 550;
+  font-size: 22px;
+  outline: none;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+div.create_public_event form div.event_info div.describe textarea {
+  width: 600px;
+  height: 320px;
+  background-color: lightgray;
+  color: black;
+  border: none;
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 550;
+  font-size: 24px;
+  outline: none;
+  margin: auto;
+}
+
+div.create_public_event form div.create_button {
+  margin-top: -80px;
+}
+
+div.create_public_event form div.create_button button {
+  width: 160px;
+  height: 70px;
+  font-size: 25px;
+  font-weight: 550;
+  font-style: 15px;
+  background-color: lightgray;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 45px;
+  outline: none;
+  margin: auto;
+}

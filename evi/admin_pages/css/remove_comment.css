@@ -1,0 +1,71 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #282F44;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrap {
+    max-width: 20000px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+    padding-bottom: 0;
+}
+
+header div{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-family: 'Solway', serif;
+    font-weight: 300;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+header button {
+    background: none;
+    border: none;
+}
+
+header button img{
+    max-width: 150px;
+    width: 60%;
+}
+
+.title {
+    justify-content: center;
+}
+
+h3 {
+    font-size: 25px;
+    margin: 10px auto;
+}
+
+.inputs_section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.heading {
+    text-align: center;
+}
+
+.update_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

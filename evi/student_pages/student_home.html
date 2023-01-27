@@ -1,0 +1,98 @@
+<?php
+
+require('../db_connection.php');
+session_start();
+?>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EVI Student Page</title>
+        <link rel="stylesheet" href="student_home.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="calendar">
+                <div class="navigationBar">
+                    <div class="Title">
+                        <h1>EVI</h1>
+                        <h2>Event Tracker</h2>
+                    </div>
+                    <div class="month">
+                        <div class="prev-month">
+                            <button>←</button>
+                        </div>
+                        <div class="date">
+                            <h1></h1>
+                            <p></p>
+                        </div>
+                        <div class="next-month">
+                            <button>→</button>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="requestRSO">
+                            <a href="../RSO_Student/request_RSO_student.html">
+                Request RSO
+              </a>
+                        </div>
+                        <div class="accountSettings">
+                            <a href="../account_settings/student_account_security.php">
+                Account Settings
+              </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="days"></div>
+                <div class="eventList">
+                    <div class="timeList">
+                        <p>9:00 am</p>
+                        <p>10:00 am</p>
+                        <p>11:30 am</p>
+                        <p>1:00 pm</p>
+                    </div>
+                    <div class="eventType">
+                        <p>Student Government Meeting</p>
+                        <p>Robotics Meeting</p>
+                        <p>Job Fair</p>
+                        <p>Internship Fair</p>
+                    </div>
+                    <div class="locationList">
+                        <p>Windermere, Fl</p>
+                        <p>Windermere, Fl</p>
+                        <p>Windermere, Fl</p>
+                        <p>Windermere, Fl</p>
+                    </div>
+
+                    <div class="moreInfoList">
+                        <p>-></p>
+                        <p>-></p>
+                        <p>-></p>
+                        <p>-></p>
+                    </div>
+
+                    <div class="eventType"></div>
+                    <div class="locationList"></div>
+                    <div class="moreInfoList"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="student_home.js"></script>
+    </body>
+
+    </html>

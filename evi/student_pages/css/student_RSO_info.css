@@ -1,0 +1,420 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+header div.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1400px;
+    margin: 20px;
+}
+
+header div.header button {
+    background-color: transparent;
+    border: none;
+}
+
+header div.header button img {
+    max-width: 50px;
+    width: 70%;
+}
+
+header div.header h1,
+header div.header h2 {
+    text-align: center;
+}
+
+div.event_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+div.event_info div.basic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+div.event_info div.basic label,
+div.event_info div.advanced div.describe div.description label {
+    font-size: 24px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+div.event_info div.basic h4,
+div.event_info div.basic a {
+    width: auto;
+    max-width: 300px;
+    height: 35px;
+    background-color: lightgray;
+    color: black;
+    border: none;
+    border: 3px solid lightblue;
+    border-radius: 10px;
+    padding: 2px 2px;
+    font-weight: 550;
+    font-size: 20px;
+    outline: none;
+    text-align: center;
+    overflow: hidden;
+    overflow-y: auto;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+div.event_info div.advanced {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.event_info div.advanced div.describe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-left: 100px;
+}
+
+div.event_info div.advanced div.describe div.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.event_info div.advanced div.describe div.description h3 {
+    width: 500px;
+    height: 180px;
+    background-color: lightgray;
+    color: black;
+    border: none;
+    border: 3px solid lightblue;
+    border-radius: 10px;
+    padding: 10px 10px;
+    font-weight: 550;
+    font-size: 24px;
+    outline: none;
+    margin: auto;
+    margin-bottom: 40px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+div.event_info div.advanced div.describe div.add_event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+div.event_info div.advanced div.describe div.add_event a {
+    border-radius: 45px;
+    background-color: lightgray;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    width: 180px;
+    height: auto;
+    text-align: center;
+    padding: 5px 5px;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 100px;
+}
+
+div.event_info div.advanced div.describe div.social_network {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 80px;
+    margin-left: 40px;
+    background-color: transparent;
+    width: 100px;
+    height: 150px;
+}
+
+div.event_info div.advanced div.describe div.social_network div {
+    margin: auto;
+}
+
+div.event_info div.advanced div.rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+div.event_info div.advanced div.rating div.user_rate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+div.event_info div.advanced div.rating div.update_rate,
+div.event_info div.advanced div.rating div.add_comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+div.event_info div.advanced div.rating div.user_rate label {
+    font-size: 24px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+div.event_info div.advanced div.rating div.user_rate h4 {
+    width: auto;
+    max-width: 150px;
+    height: auto;
+    background-color: lightgray;
+    color: black;
+    border: none;
+    border: 3px solid lightblue;
+    border-radius: 10px;
+    padding: 5px 5px;
+    font-weight: 550;
+    font-size: 22px;
+    outline: none;
+    text-align: center;
+    overflow: hidden;
+    overflow-y: auto;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+div.event_info div.advanced div.rating div.update_rate form h3,
+div.event_info div.advanced div.rating div.add_comment form h3 {
+    font-size: 22px;
+    font-weight: lighter;
+    text-align: left;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+div.event_info div.advanced div.rating div.update_rate form input {
+    width: auto;
+    max-width: 150px;
+    height: auto;
+    background-color: lightgray;
+    color: black;
+    border: none;
+    border: 3px solid lightblue;
+    border-radius: 10px;
+    padding: 5px 5px;
+    font-weight: 550;
+    font-size: 22px;
+    outline: none;
+    text-align: center;
+    overflow: hidden;
+    overflow-y: auto;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+div.event_info div.advanced div.rating div.update_rate form h5,
+div.event_info div.advanced div.rating div.add_comment form h5 {
+    font-weight: lighter;
+    text-align: left;
+}
+
+div.event_info div.advanced div.rating div.add_comment form input[type="text"] {
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    background-color: lightgray;
+    color: black;
+    border: none;
+    border: 3px solid lightblue;
+    border-radius: 10px;
+    padding: 5px 5px;
+    font-weight: 550;
+    font-size: 22px;
+    outline: none;
+    text-align: center;
+    overflow: hidden;
+    overflow-y: auto;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+div.event_info div.advanced div.rating div.add_comment form input[type="submit"] {
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    background-color: lightgray;
+    color: black;
+    border: none;
+    border: 3px solid lightblue;
+    border-radius: 10px;
+    padding: 5px 5px;
+    font-weight: 550;
+    font-size: 22px;
+    outline: none;
+    text-align: center;
+    overflow: hidden;
+    overflow-y: auto;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+div.event_info div.advanced div.comment_actions {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    margin: auto;
+    margin-right: -50px;
+    margin-left: 50px;
+}
+
+div.event_info div.advanced div.comment_actions div.comments {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    margin: auto;
+    margin-right: 10px;
+    width: 800px;
+    height: 300px;
+    padding: 10px 10px;
+}
+
+div.event_info div.advanced div.comment_actions div.comments h3 {
+    font-size: 24px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+div.event_info div.advanced div.comment_actions div.comments div.lists {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    border-radius: 15px;
+    margin: auto;
+    width: 750px;
+    height: 250px;
+    overflow: hidden;
+    overflow-y: auto;
+    direction: ltr;
+}
+
+div.event_info div.advanced div.comment_actions div.comments div.lists table {
+    background-color: transparent;
+    width: 750px;
+    height: auto;
+    border: none;
+    margin: auto;
+}
+
+div.event_info div.advanced div.comment_actions div.comments div.lists table tr {
+    background-color: transparent;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-color: transparent;
+    margin: auto;
+    width: 740px;
+}
+
+div.event_info div.advanced div.comment_actions div.comments div.lists table tr.names {
+    background-color: gray;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-color: transparent;
+    margin: auto;
+}
+
+div.event_info div.advanced div.comment_actions div.comments div.lists table tr.names td {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 670px;
+}
+
+div.event_info div.advanced div.comment_actions div.comments div.lists table tr.names td div.user_comment {
+    border-radius: 15px;
+    border-color: black;
+    border-width: 5px;
+    background-color: transparent;
+    font-size: 22px;
+    font-weight: bold;
+    width: 700px;
+    text-align: left;
+    padding: 10px 10px;
+    margin: auto;
+    margin-right: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+div.event_info div.advanced div.comment_actions div.comment_buttons {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    margin: auto;
+    margin-left: 10px;
+}
+
+div.event_info div.advanced div.comment_actions div.comment_buttons a {
+    width: auto;
+    max-width: 200px;
+    height: auto;
+    background-color: lightgray;
+    color: black;
+    border: none;
+    border: 3px solid lightblue;
+    border-radius: 10px;
+    padding: 5px 5px;
+    font-weight: 550;
+    font-size: 22px;
+    outline: none;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+}

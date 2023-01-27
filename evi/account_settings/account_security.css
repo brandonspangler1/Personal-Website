@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+}
+
+header div.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1400px;
+  margin: 20px;
+  margin-bottom: 80px;
+}
+
+header div.header button {
+  background-color: transparent;
+  border: none;
+}
+
+header div.header button img {
+  max-width: 50px;
+  width: 70%;
+}
+
+header div.header h1 {
+  text-align: center;
+}
+
+body div.account {
+  width: 700px;
+}
+
+body div.account div.name,
+body div.account div.email,
+body div.account div.username,
+body div.account div.password,
+body div.account div.phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+body div.account div.name div.title h3,
+body div.account div.email div.title h3,
+body div.account div.username div.title h3,
+body div.account div.password div.title h3,
+body div.account div.phone div.title h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+body div.account div.name div.change_name,
+body div.account div.email div.change_email,
+body div.account div.username div.change_username,
+body div.account div.password div.change_password,
+body div.account div.phone div.change_phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+body div.account div.name div.change_name div.db_name h4,
+body div.account div.email div.change_email div.db_email h4,
+body div.account div.username div.change_username div.db_username h4,
+body div.account div.password div.change_password div.db_password h4,
+body div.account div.phone div.change_phone div.db_phone h4 {
+  font-size: 24px;
+  margin: 10px;
+  width: 300px;
+  margin-right: 150px;
+}
+
+body div.account div.name div.change_name div.update_name button,
+body div.account div.email div.change_email div.update_email button,
+body div.account div.username div.change_username div.update_username button,
+body div.account div.password div.change_password div.update_password button,
+body div.account div.phone div.change_phone div.update_phone button {
+  background-color: white;
+  width: 70px;
+  height: 40px;
+  border-radius: 45px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+  margin-left: 150px;
+}
+
+div.popup_container {
+  position: fixed;
+  width: 1000px;
+  height: 1000px;
+  background-color: transparent;
+  align-items: center;
+  margin-top: 230px;
+  margin-right: 0;
+  display: none;
+  border-radius: 10px;
+}
+
+div.popup_container div.name,
+div.popup_container div.email,
+div.popup_container div.username,
+div.popup_container div.password,
+div.popup_container div.phone {
+  background-color: lightblue;
+  width: 800px;
+  height: 550px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  margin-bottom: 70px;
+  margin-left: 100px;
+}
+
+div.popup_container div.name h2,
+div.popup_container div.email h2,
+div.popup_container div.username h2,
+div.popup_container div.password h2,
+div.popup_container div.phone h2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+div.popup_container div.name h2 span,
+div.popup_container div.email h2 span,
+div.popup_container div.username h2 span,
+div.popup_container div.password h2 span,
+div.popup_container div.phone h2 span {
+  color: white;
+  font-size: 60px;
+  margin-left: 230px;
+}
+
+div.popup_container div.name h2 button,
+div.popup_container div.email h2 button,
+div.popup_container div.username h2 button,
+div.popup_container div.password h2 button,
+div.popup_container div.phone h2 button {
+  border: none;
+  background-color: transparent;
+  width: 50px;
+  height: 40px;
+  font-size: 30px;
+  margin-left: 150px;
+  margin-bottom: 60px;
+  margin-right: 30px;
+}
+
+div.popup_container div.name input,
+div.popup_container div.email input,
+div.popup_container div.username input,
+div.popup_container div.password input,
+div.popup_container div.phone input {
+  width: 500px;
+  height: 100px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid blue;
+  border-radius: 0;
+  padding: 5px 0;
+  font-weight: 550;
+  font-size: 50px;
+  outline: none;
+}
+
+div.popup_container div.name button.change-btn,
+div.popup_container div.email button.change-btn,
+div.popup_container div.username button.change-btn,
+div.popup_container div.password button.change-btn,
+div.popup_container div.phone button.change-btn {
+  width: 200px;
+  height: 90px;
+  font-size: 30px;
+  font-weight: 550;
+  font-style: 15px;
+  background-color: gold;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 45px;
+  outline: none;
+  margin: 20px;
+}

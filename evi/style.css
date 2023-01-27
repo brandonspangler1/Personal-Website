@@ -1,0 +1,381 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: rgb(44, 44, 44);
+  color: white;
+
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: auto;
+  
+}
+
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(204, 125, 51);
+  border-radius: 10px;
+}
+
+header div.header_description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+header div.header_description h1 {
+  font-size: 120px;
+}
+
+header div.header_description h4 {
+  font-size: 40px;
+}
+
+div.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+div.welcome {
+  margin-top: 40px;
+}
+
+div.welcome h3 {
+  font-size: 40px;
+}
+
+div.index_buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+div.index_buttons div.create_account {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+div.index_buttons div.create_account button {
+  background-color: white;
+  width: 220px;
+  height: 80px;
+  border-radius: 45px;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px;
+  color: black;
+  border: none;
+}
+
+div.index_buttons div.login_users {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+div.index_buttons div.login_users button {
+  background-color: white;
+  width: 220px;
+  height: 80px;
+  border-radius: 45px;
+  font-size: 38px;
+  font-weight: bold;
+  margin: 10px;
+  color: black;
+  border: none;
+}
+
+div.index_buttons div.help_users {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+div.index_buttons div.help_users button {
+  background-color: aqua;
+  width: 220px;
+  height: 80px;
+  border-radius: 45px;
+  font-size: 38px;
+  font-weight: bold;
+  margin: 10px;
+  color: black;
+  border: none;
+}
+
+div.popup_container {
+  position: fixed;
+  width: 1000px;
+  height: 1000px;
+  background-color: transparent;
+  align-items: center;
+  margin-top: 230px;
+  margin-right: 0;
+  display: none;
+  border-radius: 10px;
+}
+
+div.popup_container div.register_popup {
+  background-color: lightblue;
+  width: 1000px;
+  height: 700px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  margin-bottom: 105px;
+}
+
+div.popup_container div.register_popup h2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+div.popup_container div.register_popup h2 div {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin-left: 110px;
+  margin-right: 20px;
+}
+
+div.popup_container div.register_popup h2 div span {
+  color: white;
+  font-size: 50px;
+}
+
+div.popup_container div.register_popup h2 button {
+  border: none;
+  background-color: transparent;
+  width: 50px;
+  height: 40px;
+  font-size: 30px;
+  margin-right: 40px;
+}
+
+div.popup_container div.register_popup input {
+  width: 600px;
+  height: 70px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid blue;
+  border-radius: 0;
+  padding: 5px 0;
+  font-weight: 550;
+  font-size: 20px;
+  outline: none;
+}
+
+div.popup_container div.register_popup button.sa_register_btn {
+  width: 300px;
+  height: 100px;
+  font-size: 25px;
+  font-weight: 550;
+  font-style: 15px;
+  background-color: gold;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 45px;
+  outline: none;
+  margin: 10px;
+}
+
+div.popup_container div.login_sa_popup,
+div.popup_container div.forgot {
+  background-color: lightblue;
+  width: 1000px;
+  height: 500px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+
+div.popup_container div.login_sa_popup h2,
+div.popup_container div.forgot h2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+div.popup_container div.login_sa_popup h2 span {
+  color: white;
+  font-size: 45px;
+  margin-left: 295px;
+}
+
+div.popup_container div.forgot h2 span {
+  color: white;
+  font-size: 60px;
+  margin-left: 230px;
+}
+
+div.popup_container div.login_sa_popup h2 button {
+  border: none;
+  background-color: transparent;
+  width: 50px;
+  height: 40px;
+  font-size: 30px;
+  margin-left: 250px;
+  margin-bottom: 20px;
+}
+
+div.popup_container div.forgot h2 button {
+  border: none;
+  background-color: transparent;
+  width: 50px;
+  height: 40px;
+  font-size: 30px;
+  margin-left: 150px;
+  margin-bottom: 60px;
+  margin-right: 30px;
+}
+
+div.popup_container div.login_sa_popup input,
+div.popup_container div.forgot input {
+  width: 400px;
+  height: 70px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid blue;
+  border-radius: 0;
+  padding: 5px 0;
+  font-weight: 550;
+  font-size: 25px;
+  outline: none;
+}
+
+div.popup_container div.login_sa_popup button.login-btn {
+  width: 270px;
+  height: 90px;
+  font-size: 25px;
+  font-weight: 550;
+  font-style: 15px;
+  background-color: gold;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 45px;
+  outline: none;
+  margin: 20px;
+}
+
+div.popup_container div.forgot button.preset-btn {
+  width: 200px;
+  height: 90px;
+  font-size: 25px;
+  font-weight: 550;
+  font-style: 15px;
+  background-color: gold;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 45px;
+  outline: none;
+  margin: 20px;
+}
+
+div.popup_container div.login_sa_popup div.password-forgot-btn {
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+div.popup_container div.login_sa_popup div.password-forgot-btn button {
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+div.popup_container div.help_popup {
+  background-color: lightblue;
+  width: 1000px;
+  height: 700px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  margin-bottom: 105px;
+}
+
+div.popup_container div.help_popup h2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 90px;
+  margin-top: 20px;
+}
+
+div.popup_container div.help_popup h2 div {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin-left: 380px;
+  margin-right: 10px;
+}
+
+div.popup_container div.help_popup h2 div span {
+  color: white;
+  font-size: 50px;
+}
+
+div.popup_container div.help_popup h2 button {
+  border: none;
+  background-color: transparent;
+  width: 50px;
+  height: 40px;
+  font-size: 40px;
+  margin-right: 40px;
+}
+
+div.popup_container div.help_popup div.help_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 38px;
+  font-weight: lighter;
+  color: black;
+  width: 800px;
+  height: auto;
+  text-align: center;
+  margin: auto;
+}
+
+div.popup_container div.help_popup div.help_description a {
+  margin: auto;
+  margin-top: 30px;
+  color: blue;
+}

@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(44, 44, 44);
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+header div {
+    width: 100%;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    background-color: rgb(204, 125, 51);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Solway', serif;
+    font-size: 800%;
+    font-weight: 600;
+}
+
+header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header button img {
+    max-width: 80px;
+    width: 70%;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    display: flex-inline;
+    justify-content: center;
+}
+
+.container h1 {
+    font-size: 270%;
+    margin-left: 10%;
+}
+
+.accountButtons {
+    width: 130%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.accountButtons button {
+    width: 150%;
+    font-weight: 400;
+    letter-spacing: 0.09rem;
+    font-size: 170%;
+    color: white;
+    background-color: #4A4A4A;
+    border-radius: 200px;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding: 1.5%;
+    cursor: pointer;
+}
+
+.miscButtons {
+    width: 130%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.miscButtons button {
+    width: 150%;
+    font-weight: 400;
+    letter-spacing: 0.09rem;
+    font-size: 170%;
+    color: white;
+    background-color: #4A4A4A;
+    border-radius: 200px;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding: 1.5%;
+    cursor: pointer;
+}

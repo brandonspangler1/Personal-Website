@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+header div.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1400px;
+  margin: 20px;
+  margin-bottom: 60px;
+}
+
+header div.header button {
+  background-color: transparent;
+  border: none;
+}
+
+header div.header button img {
+  max-width: 50px;
+  width: 70%;
+}
+
+header div.header h1,
+header div.header h3 {
+  text-align: center;
+}
+
+div.rso {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 900px;
+  height: auto;
+  max-height: 500px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+div.rso table {
+  background-color: transparent;
+  width: 900px;
+  height: auto;
+  max-height: 150px;
+  margin: auto;
+  padding: 7px 7px;
+  border: none;
+}
+
+div.rso table tr.names {
+  background-color: transparent;
+  text-align: center;
+  border: none;
+  height: auto;
+  max-height: 150px;
+}
+
+div.rso table tr.names td {
+  background-color: darkgray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+div.rso table tr.names td button.event_info {
+  border-radius: 15px;
+  border-color: transparent;
+  border-width: 5px;
+  background-color: transparent;
+  font-size: 22px;
+  font-weight: bold;
+  width: auto;
+  max-width: 500px;
+  height: auto;
+  max-height: 80px;
+  text-align: center;
+  padding: 5px 5px;
+  margin: auto;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+div.rso table tr.names td button.events,
+div.rso table tr.names td button.leave {
+  border-radius: 45px;
+  background-color: lightgray;
+  font-size: 22px;
+  font-weight: bold;
+  width: auto;
+  text-align: center;
+  padding: 5px 5px;
+  margin: auto;
+}
+
+div.buttons a {
+  width: auto;
+  height: auto;
+  font-size: 38px;
+  font-weight: bold;
+  background-color: lightgray;
+  color: black;
+  border-radius: 45px;
+  outline: none;
+  margin: auto;
+  margin: 20px;
+  padding: 10px 10px;
+}

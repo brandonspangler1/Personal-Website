@@ -1,0 +1,232 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #282F44;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.grid_wrap {
+    max-width: 20000px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "info info des social"
+        "info info rate rate"
+        "info info rate rate"
+        "info info rate rate";
+    gap: 10px;
+    padding: 10px;
+}
+
+input {
+    cursor: pointer;
+}
+
+.header_btns {
+    background: none;
+    border: none;
+}
+
+.header_btns img{
+    max-width: 150px;
+    width: 60%;
+}
+
+.title {
+    font-family: 'Solway', serif;
+    font-weight: 300;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.main_header{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+
+.head { grid-area: header; }
+.info { grid-area: info; }
+.des { grid-area: des; }
+.social { grid-area: social; }
+.rate { grid-area: rate; }
+
+.grid > div {
+    background-color: grey;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.information h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.information h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: lightgrey;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.information a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightgrey;
+    margin: 0 auto;
+    width: 50%;
+    text-decoration: none;
+    color: black;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.des h3{
+    text-align: center;
+}
+
+.des textarea {
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    height: 85%;
+}
+
+.social .add_google, .add_outlook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightgrey;
+    margin: 5px auto;
+    width: 50%;
+    text-decoration: none;
+    color: black;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.social { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.user_rate h4 { 
+    background: lightgrey;
+    color: black;
+    padding: 3px 6px;
+    margin: 5px;
+}
+
+.user_rate h3 {
+    margin: 18.72px 0;
+}
+
+.rate_header { 
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+}
+
+.user_rate { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user_rate h4, h5 {
+    margin: 0;
+}
+
+.update_rate form{ 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.update_rate form input {
+    margin: 5px;
+}
+
+.update_rate form h5 {
+    margin: 0;
+}
+
+.add_comment form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_comment form h5 {
+    margin: 0;
+}
+
+.add_comment form input {
+    margin: 5px;
+}
+
+.comment_actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment_buttons { 
+    display: flex;
+    align-items: center;
+}
+
+.comment_buttons a { 
+    background: lightgrey;
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+table {
+    border: none;
+    width: 100%;
+}
+
+td {
+    border: none;
+}
+
+.comments { 
+    width: 100%;
+}
+
+.user_comment { 
+    margin-left: 50px;
+}
+

@@ -1,0 +1,97 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #000000;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+.rso_request {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+header div {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Solway', serif;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+header button {
+    background: none;
+    border: none;
+}
+
+header button img {
+    max-width: 50px;
+    width: 70%;
+}
+
+.main_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rso_request label {
+    font-size: 2rem;
+    margin-left: auto;
+}
+
+textarea {
+    width: 80%;
+    height: 250px;
+}
+
+.rso_request input {
+    font-size: 130%;
+    width: 80%;
+    margin: auto;
+}
+
+.description {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6%;
+}
+
+.description textarea {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6%;
+}
+
+.submit button {
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 6%;
+}

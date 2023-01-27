@@ -1,0 +1,142 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #282F44;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrap {
+    max-width: 20000px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+    padding-bottom: 5px;
+}
+
+header div{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-family: 'Solway', serif;
+    font-weight: 300;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+header button {
+    background: none;
+    border: none;
+}
+
+header button img{
+    max-width: 150px;
+    width: 60%;
+}
+
+form {
+    width: 30%;
+}
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+  
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.column:nth-of-type(odd){
+    flex: 3;
+}
+
+h2 {
+    text-align: center;
+}
+
+.btns {
+    background: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.head {
+    display: block;
+    text-align: center;
+}
+
+.lists {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: 80%;
+}
+
+td a {
+    background: lightgrey;
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+td {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+td button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.first, .second {
+  margin: 0 5px;
+}
+
+.request {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.request_btn {
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: none;
+}
+
+.table_wrap {
+    max-width: 20000px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+    padding-top: 40px;
+}
+

@@ -1,0 +1,7 @@
+wp-cli.yml
+.ftpquota
+.htaccess
+.htaccess.*
+error_log
+.well-known
+cgi-bin
