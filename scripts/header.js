@@ -61,47 +61,47 @@ gsap.to("#headerPic", {
     y: -200,
 });
 
-gsap.to("#headerName", {
-    scrollTrigger: {
-        trigger: "#headerPic",
-        start: "center top",
-        scrub: 1,
-        toggleActions: "restart none reverse none",
-    },
-    y: 150,
-});
+// gsap.to("#headerName", {
+//     scrollTrigger: {
+//         trigger: "#headerPic",
+//         start: "center top",
+//         scrub: 1,
+//         toggleActions: "restart none reverse none",
+//     },
+//     y: 150,
+// });
 
-headerNameTween = gsap.to("#headerName", {
-    scrollTrigger: {
-        trigger: "#headerPic",
-        start: "bottom top",
-        end: "+=20",
-        // markers: true,
-        scrub: 1,
-        toggleActions: "restart none reverse none",
-    },
-    x: function getWidth(){
-            const headerName = document.getElementById('headerName');
-            const headerPic = document.getElementById('headerPic');
+// headerNameTween = gsap.to("#headerName", {
+//     scrollTrigger: {
+//         trigger: "#headerPic",
+//         start: "bottom top",
+//         end: "+=20",
+//         // markers: true,
+//         scrub: 1,
+//         toggleActions: "restart none reverse none",
+//     },
+//     x: function getWidth(){
+//             const headerName = document.getElementById('headerName');
+//             const headerPic = document.getElementById('headerPic');
         
-            var windowWidth, sideMargin, headerPicWidth;
+//             var windowWidth, sideMargin, headerPicWidth;
         
-            windowWidth = window.innerWidth;
-            sideMargin = windowWidth * 0.04;
+//             windowWidth = window.innerWidth;
+//             sideMargin = windowWidth * 0.04;
             
             
-            headerNameWidth = headerName.offsetWidth;
-            // console.log(headerNameWidth);  
+//             headerNameWidth = headerName.offsetWidth;
+//             // console.log(headerNameWidth);  
             
             
-            headerPicWidth = headerPic.clientWidth + 6;
-            // console.log(headerPicWidth); 
+//             headerPicWidth = headerPic.clientWidth + 6;
+//             // console.log(headerPicWidth); 
             
-            // console.log(sideMargin);
+//             // console.log(sideMargin);
         
-            return -(headerPicWidth + sideMargin*2)
-    },
-});
+//             return -(headerPicWidth + sideMargin*2)
+//     },
+// });
 
 window.addEventListener('resize', () => {
     headerNameTween.invalidate();

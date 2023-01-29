@@ -17,12 +17,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <body class="grid_wrap">
     <header class="navi header" id="header">
         <div class="headerInfo" id="headerInfo">
-            <button class="personalPicButton" id="headerPic" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})"><img class="personalPic"  src="assets/images/Profile_Picture.jpg" /></button>
+            <!-- <button class="personalPicButton" id="headerPic" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})"><img class="personalPic"  src="assets/images/Profile_Picture.jpg" /></button> -->
             <button class="headerName" id="headerName" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Brandon Spangler</button>
         </div>
 
@@ -33,8 +37,8 @@
             <div class="btn_wrap" id="btn_wrap">
                 <!-- <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Home</button> -->
                 <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#projects', offsetY: headerHeight}})">Projects</button>
-                <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#about', offsetY: headerHeight}})">About Me</button>
-                <button class="headerBtns rightMostHeaderBtn" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#footer'}})">Contact Me</button>
+                <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#about', offsetY: headerHeight}})">About</button>
+                <button class="headerBtns rightMostHeaderBtn" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#footer'}})">Contact</button>
                 <!-- <a href="#contact">Contact Me</a> -->
             </div> 
         
@@ -62,10 +66,22 @@
         <h1 class="welcomeTitle"><span class="orange">Hello</span>, I'm Brandon</h1>
 
         <h2 class="welcomeBuzz">
-            Full-Stack Developer and University of Central Florida Senior
-        </h2>
+            University of Central Florida Computer Science Senior
+        </h2> 
 
         <div class="welcomeBtnWrapper">
+            <!-- <a class="projectBtn" href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <h1 class="projectBtnText">Resume</h1>
+                <image class="projectBtnImage" src="assets/images/Icons/download_icon_black.png"></image>
+            </a>
+            <a class="projectBtn" href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <h1 class="projectBtnText">LinkedIn</h1>
+                <image class="projectBtnImage" src="assets/images/Logos/linkedin_logo_black.png"></image>
+            </a>
+            <a class="projectBtn" href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <h1 class="projectBtnText">GitHub</h1>
+                <image class="projectBtnImage" src="assets/images/Logos/github_logo_dark.png"></image>
+            </a> -->
             <a class="resumeBtn" href="assets/Resume.pdf">Resume</a>
             <a class="resumeBtn" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">LinkedIn</a>
             <a class="resumeBtn" href="https://github.com/brandonspangler2">GitHub</a>
@@ -74,7 +90,7 @@
 
     <section class="proj" id="projects">
         <div>
-            <h1 class="projectTitle" id="projectTitle">Project Showcase</h1>
+            <h1 class="projectTitle" id="projectTitle">Projects</h1>
         </div>
 
         <div class="project_wrap">
@@ -82,21 +98,26 @@
                 <div class="projectDescriptionWrapper">
                     <h2 class="projectHeader">PhotoCode</h2>
                     <p class="projectDes">
-                        PhotoCode will be a repository-based app to let you store and share your code. 
-                        It will consist of an IOS mobile application and a desktop app. 
-                        In both apps, you can create, edit, or delete files and create new projects. 
-                        The mobile app will utilize Apple's Scan-to-Text feature for scanning code files. 
+                        PhotoCode is a repository-based IOS app and website to store and share code. You can create, edit, or delete files and create new projects. The IOS app uses Google's ML kit for the Scan-To-Text feature. 
+                    </p>
+                    <p class="projectDes">
+                        Technologies: React, React Native, MongoDB, JavaScript, Node.js, Express
                     </p>
                 </div>
 
                 <img class="photoCodeSpread" src="assets/images/PhotoCode/PhotoCode-Spread.png" />
             </div>
-            <div class="arrowWrap">
-                <h3 class="explore">Explore</h3>
-                <a class="arrow" href="https://github.com/ZacharyEbaugh/photoCode">
-                    <image class="arrowSize" src="assets/images/Arrows/Arrow_Flame.png"></image>
+            <div class="projectBtnsWrap">
+                <!-- <h3 class="explore">Explore</h3> -->
+                <a class="projectBtn" href="https://photocode.app" target="_blank" rel="noopener noreferrer">
+                    <h1 class="projectBtnText">Website</h1>
+                    <image class="projectBtnImage" src="assets/images/Icons/open_in_new.png"></image>
                 </a>
-            </div>
+                <a class="projectBtn" href="https://github.com/ZacharyEbaugh/photoCode" target="_blank" rel="noopener noreferrer">
+                    <h1 class="projectBtnText">View Code</h1>
+                    <image class="projectBtnImage" src="assets/images/Logos/github_logo_dark.png"></image>
+                </a>
+            </div>  
         </div>
 
         <div class="project_wrap">
@@ -108,17 +129,24 @@
                         You can create an account and create playlists to start playing music! 
                         You can also link your Spotify account to view your profile and top five songs.
                     </p>
+                    <p class="projectDes">
+                        Technologies: HTML, CSS, JavaScript, PHP, phpMyAdmin
+                    </p>
                 </div>
 
                 <image class="goatifyComputer" src="assets/images/Project_Images/Goatify/Goatify Markup.png"></image>
             </div>
-            <div class="arrowWrap">
-                <h3 class="explore">Explore</h3>
-                <!-- <a class="arrow" href="https://github.com/brandonspangler2/goatify"> -->
-                <a class="arrow" href="goatify-case-study.html">
-                    <image class="arrowSize" src="assets/images/Arrows/Arrow_Flame.png"></image>
+            <div class="projectBtnsWrap">
+                <!-- <h3 class="explore">Explore</h3> -->
+                <a class="projectBtn" href="https://brandonspangler.com/goatify" target="_blank" rel="noopener noreferrer">
+                    <h1 class="projectBtnText">Website</h1>
+                    <image class="projectBtnImage" src="assets/images/Icons/open_in_new.png"></image>
                 </a>
-            </div>
+                <a class="projectBtn" href="https://github.com/brandonspangler2/goatify" target="_blank" rel="noopener noreferrer">
+                    <h1 class="projectBtnText">View Code</h1>
+                    <image class="projectBtnImage" src="assets/images/Logos/github_logo_dark.png"></image>
+                </a>
+            </div>  
         </div>
 
         <div class="projectLibraryWrapper">
@@ -187,12 +215,7 @@
                     <img  class="socialIcon"
                         src="assets/images/Logos/github_logo_light.png">
                 </a>
-                <a class="socialIconLink link3" href="">
-                    <h3 class="socialName">Discord</h3>
-                    <img  class="socialIcon"
-                        src="assets/images/Logos/Discord-Logo-White.png">
-                </a>
-                <a class="socialIconLink link4" href="assets/Resume.pdf">
+                <a class="socialIconLink link3" href="assets/Resume.pdf">
                     <h3 class="socialName">Resume</h3>
                     <img  class="socialIcon"
                         src="assets/images/Icons/download_icon_white.png">
@@ -200,7 +223,7 @@
             </div>
         </div>
         <div class="footerBottom">
-            <h1 class="copyright">© 2022 Brandon Spangler</h1>
+            <h1 class="copyright">© 2023 Brandon Spangler</h1>
             <a class="websiteCode" href="https://github.com/brandonspangler2/Personal-Website">Website Source Code</a>
         </div>
     </footer>
@@ -209,40 +232,41 @@
     <script src="scripts/footer.js"></script>
 
     <script>
+        console.log(window.innerWidth); 
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.set('#projectTitle', {left: '50%', top: '50%', xPercent:-50, yPercent:-50, y: 50, x: '-200%'});
+        // gsap.set('#projectTitle', {left: '50%', top: '50%', xPercent:-50, yPercent:-50, y: 50, x: '-200%'});
         // gsap.set('#menuButton', {x: '-200%'});
 
-        gsap.to("#projectTitle", {
-            scrollTrigger: {
-                trigger: "#projects",
-                start: "top bottom",
-                endTrigger: "#projectTitle",
-                end: "bottom center",
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart none none none",
-            },
-            x: 0,
-            // duration: 2,
-        });
+        // gsap.to("#projectTitle", {
+        //     scrollTrigger: {
+        //         trigger: "#projects",
+        //         start: "top bottom",
+        //         endTrigger: "#projectTitle",
+        //         end: "bottom center",
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart none none none",
+        //     },
+        //     x: 0,
+        //     // duration: 2,
+        // });
 
-        gsap.set('#aboutHeader', {left: '50%', top: '50%', xPercent:-50, yPercent:-50, y: 50, x: '200%'});
+        // gsap.set('#aboutHeader', {left: '50%', top: '50%', xPercent:-50, yPercent:-50, y: 50, x: '200%'});
 
-        gsap.to("#aboutHeader", {
-            scrollTrigger: {
-                trigger: "#about",
-                start: "top bottom",
-                endTrigger: "#aboutHeader",
-                end: "bottom center",
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart none none none",
-            },
-            x: 0,
-            // duration: 2,
-        });
+        // gsap.to("#aboutHeader", {
+        //     scrollTrigger: {
+        //         trigger: "#about",
+        //         start: "top bottom",
+        //         endTrigger: "#aboutHeader",
+        //         end: "bottom center",
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart none none none",
+        //     },
+        //     x: 0,
+        //     // duration: 2,
+        // });
 
         var headerHeight = document.getElementById("header").offsetHeight + 28;
         // console.log(headerHeight);

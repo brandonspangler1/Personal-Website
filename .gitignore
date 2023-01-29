@@ -5,3 +5,4 @@ wp-cli.yml
 error_log
 .well-known
 cgi-bin
+fswatch*.sh

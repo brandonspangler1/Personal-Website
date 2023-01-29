@@ -23,13 +23,15 @@
     background: #051622;
     background: #061926;
     background: #000000;
+    background: #98C1D9;
     position: fixed;
     top: 0;
     z-index: 3;
     /* visibility: hidden; */
     /* box-shadow: 0 1px 4px white; */
-    border-bottom: 2px solid #FFFFFF;
-}
+    /* border-bottom: 2px solid #FFFFFF; */
+    opacity: 0.9;
+} 
 
 .menuButton {
     visibility: hidden;
@@ -44,11 +46,11 @@
 }
 
 .headerName {
-    font-size: 2.5rem;
+    font-size: 1.5rem; 
     /* opacity: 0.75; */
     /* visibility: hidden; */
     position: relative;
-    top: -150px;
+    /* top: -150px; */
 }
 
 .headerNameMobile {
@@ -160,9 +162,11 @@
     text-decoration: none;
     color: #FEFEFE;
     color: #FEF5F1;
-    margin: 0 2rem;
+    color: #293241;
+    margin: 0.5rem 1rem;
     /* opacity: 0.75; */
-    font-size: 2.5rem;
+    font-size: 1rem;
+    font-weight: 300;
     font-family: 'Inter', sans-serif;
 }
 
