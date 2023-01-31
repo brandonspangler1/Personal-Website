@@ -13,39 +13,30 @@
     <link rel="stylesheet" href="css/navigation.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@700&family=Raleway&family=Roboto+Slab&family=Rubik&family=Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@700&family=Raleway&family=Roboto+Slab&family=Rubik&family=Titillium+Web&display=swap&family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
-
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <body class="grid_wrap">
     <header class="navi header" id="header">
         <div class="headerInfo" id="headerInfo">
-            <!-- <button class="personalPicButton" id="headerPic" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})"><img class="personalPic"  src="assets/images/Profile_Picture.jpg" /></button> -->
             <button class="headerName" id="headerName" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Brandon Spangler</button>
         </div>
 
         <button class="headerNameMobile" id="headerNameMobile" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Brandon Spangler</button>
         
 
-        <!-- <div class="menuBar" id="menuBar"> -->
             <div class="btn_wrap" id="btn_wrap">
-                <!-- <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Home</button> -->
                 <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#projects', offsetY: headerHeight}})">Projects</button>
                 <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#about', offsetY: headerHeight}})">About</button>
                 <button class="headerBtns rightMostHeaderBtn" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#footer'}})">Contact</button>
-                <!-- <a href="#contact">Contact Me</a> -->
             </div> 
         
             <div class="menuButton" id="menuButton" onClick="menuTransform(menuButton)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
-                <div class="bar3"></div>
             </div>
 
             <div class="hamburgerMenuWrapper" id="hamburgerMenuWrapper">
@@ -59,7 +50,6 @@
                     <a class="hamburgerBtns" href="https://github.com/brandonspangler2">GitHub</a>
                 </div>
             </div>
-        <!-- </div> -->
     </header>
 
     <section class="main" id="home">
@@ -70,18 +60,6 @@
         </h2> 
 
         <div class="welcomeBtnWrapper">
-            <!-- <a class="projectBtn" href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer">
-                <h1 class="projectBtnText">Resume</h1>
-                <image class="projectBtnImage" src="assets/images/Icons/download_icon_black.png"></image>
-            </a>
-            <a class="projectBtn" href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer">
-                <h1 class="projectBtnText">LinkedIn</h1>
-                <image class="projectBtnImage" src="assets/images/Logos/linkedin_logo_black.png"></image>
-            </a>
-            <a class="projectBtn" href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer">
-                <h1 class="projectBtnText">GitHub</h1>
-                <image class="projectBtnImage" src="assets/images/Logos/github_logo_dark.png"></image>
-            </a> -->
             <a class="resumeBtn" href="assets/Resume.pdf">Resume</a>
             <a class="resumeBtn" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">LinkedIn</a>
             <a class="resumeBtn" href="https://github.com/brandonspangler2">GitHub</a>
@@ -108,7 +86,6 @@
                 <img class="photoCodeSpread" src="assets/images/PhotoCode/PhotoCode-Spread.png" />
             </div>
             <div class="projectBtnsWrap">
-                <!-- <h3 class="explore">Explore</h3> -->
                 <a class="projectBtn" href="https://photocode.app" target="_blank" rel="noopener noreferrer">
                     <h1 class="projectBtnText">Website</h1>
                     <image class="projectBtnImage" src="assets/images/Icons/open_in_new.png"></image>
@@ -137,7 +114,6 @@
                 <image class="goatifyComputer" src="assets/images/Project_Images/Goatify/Goatify Markup.png"></image>
             </div>
             <div class="projectBtnsWrap">
-                <!-- <h3 class="explore">Explore</h3> -->
                 <a class="projectBtn" href="https://brandonspangler.com/goatify" target="_blank" rel="noopener noreferrer">
                     <h1 class="projectBtnText">Website</h1>
                     <image class="projectBtnImage" src="assets/images/Icons/open_in_new.png"></image>
@@ -202,7 +178,6 @@
                       <input type="submit" name="submit" id="submit" value="Submit">
                     </div>
                   </form>
-                <!-- <a class="email">brandons0207@gmail.com</a> -->
             </div>
             <div class="socialIconWrapper">
                 <a class="socialIconLink link1" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">
@@ -232,7 +207,7 @@
     <script src="scripts/footer.js"></script>
 
     <script>
-        console.log(window.innerWidth); 
+        // console.log(window.innerWidth); 
         gsap.registerPlugin(ScrollTrigger);
 
         // gsap.set('#projectTitle', {left: '50%', top: '50%', xPercent:-50, yPercent:-50, y: 50, x: '-200%'});

@@ -33,7 +33,6 @@ if (isset($_SESSION['login_successful']) && $_SESSION['login_successful'] == tru
     <div class="gridWrap">
         <header class="header">
             <div class="headerTitlesWrapper">
-                <h3 class="headerSpotify">Spotify @</h3>
                 <h1 class="headerTitle">GOATIFY</h1>
             </div>
         </header>

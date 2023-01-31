@@ -15,10 +15,8 @@ html {
 }
 
 body {
-    background: #A0AECD;
-    background: #051622;
-    background: #000000;
-    color: #FEF5F1;
+    background: #98C1D9; 
+    color: #293241;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -37,6 +35,13 @@ button, .menuButton {
     flex-direction: column;
     align-items: center;
     height: 100vh;
+}
+
+.projectLibraryTitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin: 4rem 2rem;
+    text-align: center;
 }
 
 .allProjects_wrap {
@@ -129,7 +134,19 @@ button, .menuButton {
 }
 
 @media screen and (max-width: 600px) {
-
+    .projectLibraryTitle {
+        font-size: 5rem;
+    }
+    .allProjects_wrap {
+        width: 100%;
+        /* align-self: center; */
+        /* justify-self: center; */
+        align-content: flex-start;
+        /* justify-content: center; */
+        justify-items: center;
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
 }
 
 @media screen and (max-width: 400px) {

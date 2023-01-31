@@ -59,9 +59,12 @@
     left: -20rem;
     background: none;
     border: none;
-    color: #FEF5F1;
+    /* color: #FEF5F1; */
     /* opacity: 0.75; */
     font-size: 3rem;
+    color: #293241;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
 }
 
 .personalPicButton {
@@ -203,7 +206,7 @@
     font-weight: 300;
 
     background: none;
-    border: 0.4rem solid #EF4F1F;
+    border: 0.4rem solid #3D5A80;
     /* border-bottom: 0.25rem solid #738290; */
     border-radius: 0.5rem;
     color: #239DFB;
@@ -211,8 +214,8 @@
     text-align: center;
     text-decoration: none;
 
-    background-color: #FEF5F1;
-    color: #373238;
+    background-color: #293241;
+    color: #E0FBFC;
     margin: 0 2rem 0 0;
     margin-bottom: 2rem;
 }
@@ -224,21 +227,21 @@
 }
 
 .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #373238;
-    border-radius: 1rem;
+    width: 25px;
+    height: 3px;
+    background-color: #293241;
+    border-radius: 2rem;
     margin: 6px 0;
     transition: 0.6s;
 }
 
 .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(0px, 6px);
 }
 
 .change .bar2 {
-    transform: rotate(45deg) translate(-1px, 1px);
+    transform: rotate(45deg) translate(0px, -6px);
 }
 
 .change .bar3 {
@@ -250,6 +253,7 @@
 @media screen and (max-width: 600px) {
     .header {
         justify-content: space-between;
+        align-items: center;
     }
     .headerInfo {
         position: absolute;

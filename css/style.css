@@ -38,18 +38,7 @@ html {
 }
 
 body {
-    /* background: #AABBCD; */
-    background: #A0AECD;
-    background: #051622;
-    background: #061926;
-    background: #000000;
     background: #98C1D9; 
-    /* background: #12110D; */
-    /* background: #373238; */
-    /* background: #14213d; */
-    /* background: #add; */
-    color: #fffffa;
-    color: #FEF5F1;
     color: #293241;
     margin: 0;
     padding: 0;
@@ -411,6 +400,9 @@ button, .menuButton {
         margin: 0 20vw;
         /* font-size: 5rem; */
     }
+    .welcomeBtnWrapper {
+        flex-direction: column;
+    }
     .profilePicture {
         height: 15rem;
         width: 15rem;
@@ -432,7 +424,10 @@ button, .menuButton {
         padding-top: 1rem;
     }
     .resumeBtn {
-        margin: 10px 1rem;
+        margin: 15px 1rem;
+        /* padding: 10px 10rem; */
+        width: 75%;
+        text-align: center;
     }
 
     .projectOverviewWrapper {

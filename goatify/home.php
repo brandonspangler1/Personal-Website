@@ -211,9 +211,7 @@
             <p class="aboutGoatifyText">
                 Goatify was originally a classroom project created by Alfred Yoo, Ahmad Louis, Exdol Davy, and Brandon Spangler. 
                 The goal was to be an online music player 'proof of concept'. 
-                I later added the ability to connect to your spotify account. 
-                This was done using Spotify's Web APIs. 
-                I did this because I thought it was a cool idea and some good practice using OAuth 2.0 Authorization Flow and calling different APIs.
+                I later added the ability to connect to your spotify account.
             </p>
         </div>
 
