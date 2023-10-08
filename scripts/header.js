@@ -2,53 +2,54 @@
 
 var flag = true;
 function menuTransform(x) {
+    console.log("menuTransform")
 
     var page_path = window.location.pathname;
-    var current_page = page_path.substring(page_path.lastIndexOf('/') + 1);
+    // var current_page = page_path.substring(page_path.lastIndexOf('/') + 1);
     
     x.classList.toggle("change");
     const headerHeight = document.getElementById("header").offsetHeight;
     // console.log(headerHeight);
     document.getElementById("hamburgerMenuWrapper").classList.toggle("change");
-    if (current_page == "index.html") {
-        const mainSection = document.getElementById('home');
-        const projectSection = document.getElementById('projects');
-        const aboutSection = document.getElementById('about');
-        const footerSection = document.getElementById('footer');
+    // if (current_page == "index.html") {
+    const mainSection = document.getElementById('home');
+    const projectSection = document.getElementById('projects');
+    const aboutSection = document.getElementById('about');
+    const footerSection = document.getElementById('footer');
 
-        if (flag)
-        {
-            hamburgerMenu.style.transform = "translate(0," + (-headerHeight/2) + "px)";
-            mainSection.style.filter = 'blur(20px)';
-            projectSection.style.filter = 'blur(20px)';
-            aboutSection.style.filter = 'blur(20px)';
-            footerSection.style.filter = 'blur(20px)';
-        }
-        else
-        { 
-            hamburgerMenu.style.transform = "translate(250%," + (-headerHeight/2) + "px)";
-            mainSection.style.filter = 'blur(0)';
-            projectSection.style.filter = 'blur(0)';
-            aboutSection.style.filter = 'blur(0)';
-            footerSection.style.filter = 'blur(0)';
-        }
-    } else if (current_page == "projectLibrary.html") {
-        const projectLibraryHeader = document.getElementById('projectLibraryHeader');
-        const projects = document.getElementById('projects');
-        const footer = document.getElementById('footer');
-
-        if (flag) {
-            hamburgerMenu.style.transform = "translate(0," + (-headerHeight/2) + "px)";
-            projectLibraryHeader.style.filter = 'blur(20px)';
-            projects.style.filter = 'blur(20px)';
-            footer.style.filter = 'blur(20px)';
-        } else { 
-            hamburgerMenu.style.transform = "translate(250%," + (-headerHeight/2) + "px)";
-            projectLibraryHeader.style.filter = 'blur(0)';
-            projects.style.filter = 'blur(0)';
-            footer.style.filter = 'blur(0)';
-        }
+    if (flag)
+    {
+        hamburgerMenu.style.transform = "translate(0," + (-headerHeight/2) + "px)";
+        mainSection.style.filter = 'blur(20px)';
+        projectSection.style.filter = 'blur(20px)';
+        aboutSection.style.filter = 'blur(20px)';
+        footerSection.style.filter = 'blur(20px)';
     }
+    else
+    { 
+        hamburgerMenu.style.transform = "translate(250%," + (-headerHeight/2) + "px)";
+        mainSection.style.filter = 'blur(0)';
+        projectSection.style.filter = 'blur(0)';
+        aboutSection.style.filter = 'blur(0)';
+        footerSection.style.filter = 'blur(0)';
+    }
+    // } else if (current_page == "projectLibrary.html") {
+    //     const projectLibraryHeader = document.getElementById('projectLibraryHeader');
+    //     const projects = document.getElementById('projects');
+    //     const footer = document.getElementById('footer');
+
+    //     if (flag) {
+    //         hamburgerMenu.style.transform = "translate(0," + (-headerHeight/2) + "px)";
+    //         projectLibraryHeader.style.filter = 'blur(20px)';
+    //         projects.style.filter = 'blur(20px)';
+    //         footer.style.filter = 'blur(20px)';
+    //     } else { 
+    //         hamburgerMenu.style.transform = "translate(250%," + (-headerHeight/2) + "px)";
+    //         projectLibraryHeader.style.filter = 'blur(0)';
+    //         projects.style.filter = 'blur(0)';
+    //         footer.style.filter = 'blur(0)';
+    //     }
+    // }
 
     flag = !flag;
 }

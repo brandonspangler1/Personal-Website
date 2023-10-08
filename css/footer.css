@@ -5,15 +5,12 @@
 
 .footer {
     grid-area: footer;
-    background-color: #080628;
-    background-color: #061926;
-    background-color: #1f2833ff;
-    background-color: #12110D;
-    color: #FEF5F1;
+    background-color: #212529;
+    color: #CED4DA;
     width: 100%;
     padding: 1rem 0 0 0;
     /* box-shadow: 0 -2px 4px #A9D5F2; */
-    border-top: 1px solid white;
+    border-top: 1px solid #F8F9FA;
     /* font-family: 'Raleway', sans-serif; */
     font-family: 'Inter', sans-serif;
     /* font-weight: 300; */
@@ -45,7 +42,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #FEF5F1;
+    color: #CED4DA;
     padding: 0.25rem 0;
 }
 
@@ -140,11 +137,12 @@
 
 .emailSubmit input {
     background: none;
-    color: #239DFB;
-    color: #EF4F1F;
+    /* color: #239DFB;
+    color: #EF4F1F; */
+    color: #CED4DA;
     border-radius: 0.5rem;
     border: 0.2rem solid #738290;
-    border: 0.15rem solid #00678F;
+    border: 0.15rem solid #495057;
     font-size: 1rem;
     /* font-family: 'Raleway', sans-serif; */
     font-weight: 300;
@@ -154,9 +152,9 @@
 
 .emailSubmit input:hover {
     /* font-weight: 500; */
-    background-color: #FEF5F1;
-    color: #12110D;
-    border: 0.15rem solid #EF4F1F;
+    /* background-color: #FEF5F1; */
+    color: #EF4F1F;
+    /* border: 0.15rem solid #EF4F1F; */
 }
 
 .copyright, .websiteCode {

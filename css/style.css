@@ -13,6 +13,12 @@ Colors:
     - Light Cyan - #E0FBFC
     - Dark Sky Blue - #98C1D9
     - Grey Blue - #3D5A80
+
+
+    - Eerie Black - #212529
+    - Outer space - #495057
+    - French Grey - #CED4DA
+    - Sea salt - #F8F9FA
 */
 
 /* || General Styles */
@@ -39,7 +45,9 @@ html {
 
 body {
     background: #98C1D9; 
+    background: #212529;
     color: #293241;
+    color: #CED4DA;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -136,6 +144,7 @@ button, .menuButton {
     /* color: #239DFB; */
     /* color: #FEF5F1; */
     color: #293241;
+    color: #CED4DA;
     border-radius: 1rem;
     font-size: 2.5rem;
     font-weight: 300;
@@ -148,6 +157,7 @@ button, .menuButton {
     border: 0.25rem solid #F5865C;
     border: 0.25rem solid #EF4F1F;
     border: 0.2rem solid #293241; 
+    border: 0.2rem solid #495057;
 }
 
 .resumeBtn:hover {
@@ -183,9 +193,10 @@ button, .menuButton {
     /* width: min-content; */
     font-family: 'Inter', sans-serif;
     white-space: pre;
-    color: #FB8122;
+    /* color: #FB8122;
     color: #EF4F1F;
     color: #293241;
+    color: #495057; */
     text-align: center;
     /* position: relative; */
 }
@@ -243,7 +254,7 @@ button, .menuButton {
     display: flex;
     flex-direction: row;
     /* background: #3D5A80; */
-    border: 0.15rem solid #293241;
+    border: 0.15rem solid #495057;
     text-decoration: none;
     align-items: center;
     border-radius: 1rem;
@@ -253,7 +264,8 @@ button, .menuButton {
 .projectBtnText {
     text-decoration: none;
     font-family: 'Titillium Web', sans-serif;
-    color: #293241;
+    /* color: #293241; */
+    color: #CED4DA;
     font-weight: 100;
     margin: 0.5rem 0.5rem;
 }
@@ -339,10 +351,10 @@ button, .menuButton {
     align-items: center;
     margin: 20px 0;
     border-radius: 0.5rem;
-    background-color: #407899;
+    /* background-color: #407899;
     background-color: #738290;
     background-color: #373238;
-    color: #FEF5F1;
+    color: #FEF5F1; */
 }
 
 .aboutHeader {
@@ -352,9 +364,9 @@ button, .menuButton {
     text-align: center;
     font-weight: 400;
     font-family: 'Inter', sans-serif;
-    color: #FB8122;
+    /* color: #FB8122;
     color: #EF4F1F;
-    color: #293241;
+    color: #293241; */
     /* width: min-content; */
     /* white-space: pre; */
     position: relative;
@@ -364,7 +376,7 @@ button, .menuButton {
 .profilePicture {
     height: 18rem;
     width: 18rem;
-    border: 0.15rem solid #00678F;
+    border: 0.15rem solid #495057;
     border-radius: 0.1rem;
     margin: 30px;
 }

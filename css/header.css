@@ -24,6 +24,7 @@
     background: #061926;
     background: #000000;
     background: #98C1D9;
+    background: #212529;
     position: fixed;
     top: 0;
     z-index: 3;
@@ -79,9 +80,10 @@
     width: 5rem;
     height: 5rem;
     /* margin: 0.5rem 2rem; */
-    border-radius: 0.5rem;
+    border-radius: 100rem;
     border: 3px solid #124F7B;
-    border: 3px solid #373238;
+    border: 0.25rem solid #495057;
+    /* border: 3px solid #F8F9FA; */
     visibility: visible;
 }
 
@@ -166,6 +168,7 @@
     color: #FEFEFE;
     color: #FEF5F1;
     color: #293241;
+    color: #CED4DA;
     margin: 0.5rem 1rem;
     /* opacity: 0.75; */
     font-size: 1rem;
@@ -199,25 +202,31 @@
 }
 
 .hamburgerBtns {
-    width: 75%;
+    width: 65%;
 
     font-family: 'Inter', sans-serif;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 300;
 
     background: none;
-    border: 0.4rem solid #3D5A80;
+    border: 0.4rem solid #495057;
     /* border-bottom: 0.25rem solid #738290; */
     border-radius: 0.5rem;
-    color: #239DFB;
+    /* color: #239DFB; */
     
     text-align: center;
     text-decoration: none;
 
-    background-color: #293241;
+    background-color: #212529;
+    
     color: #E0FBFC;
+    color: #F8F9FA;
     margin: 0 2rem 0 0;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+}
+
+.hamburgerBtns:hover {
+    color: #EF4F1F;
 }
 
 .menuBar {
@@ -230,6 +239,7 @@
     width: 25px;
     height: 3px;
     background-color: #293241;
+    background-color: #F8F9FA;
     border-radius: 2rem;
     margin: 6px 0;
     transition: 0.6s;
@@ -290,9 +300,9 @@
         /* transform: translate(100%, 0); */
     }
     
-    .personalPic {
+    /* .personalPic {
         visibility: hidden;
-    }
+    } */
 
     .btn_wrap {
         position: absolute;

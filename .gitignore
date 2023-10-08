@@ -6,3 +6,5 @@ error_log
 .well-known
 cgi-bin
 fswatch*.sh
+evi/feed.json
+.DS_Store

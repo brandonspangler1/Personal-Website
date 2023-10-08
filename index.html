@@ -18,6 +18,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="scripts/header.js"></script>
+    <!-- <script src="scripts/footer.js"></script> -->
 </head>
 <body class="grid_wrap">
     <header class="navi header" id="header">
@@ -25,8 +27,8 @@
             <button class="headerName" id="headerName" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Brandon Spangler</button>
         </div>
 
-        <button class="headerNameMobile" id="headerNameMobile" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Brandon Spangler</button>
-        
+        <!-- <button class="headerNameMobile" id="headerNameMobile" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Brandon Spangler</button> -->
+            <button class="headerNameMobile" id="headerNameMobile" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})"><img class="personalPic" src="/assets/images/Profile_Picture.jpg"/></button>
 
             <div class="btn_wrap" id="btn_wrap">
                 <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#projects', offsetY: headerHeight}})">Projects</button>
@@ -44,7 +46,6 @@
                     <button class="hamburgerBtns" id="firstHamburgerButton" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'}), menuTransform(menuButton)">Home</button>
                     <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#projects'}), menuTransform(menuButton)">Projects</button>
                     <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#about', offsetY: 0}}), menuTransform(menuButton)">About Me</button>
-                    <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#footer'}), menuTransform(menuButton)">Contact Me</button>
                     <a class="hamburgerBtns" href="assets/Resume.pdf">Resume</a>
                     <a class="hamburgerBtns" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">LinkedIn</a>
                     <a class="hamburgerBtns" href="https://github.com/brandonspangler2">GitHub</a>
@@ -56,7 +57,7 @@
         <h1 class="welcomeTitle"><span class="orange">Hello</span>, I'm Brandon</h1>
 
         <h2 class="welcomeBuzz">
-            University of Central Florida Computer Science Senior
+            University of Central Florida Computer Science Graduate
         </h2> 
 
         <div class="welcomeBtnWrapper">
@@ -88,11 +89,11 @@
             <div class="projectBtnsWrap">
                 <a class="projectBtn" href="https://photocode.app" target="_blank" rel="noopener noreferrer">
                     <h1 class="projectBtnText">Website</h1>
-                    <image class="projectBtnImage" src="assets/images/Icons/open_in_new.png"></image>
+                    <image class="projectBtnImage" src="assets/images/Icons/open_in_new_light.png"></image>
                 </a>
                 <a class="projectBtn" href="https://github.com/ZacharyEbaugh/photoCode" target="_blank" rel="noopener noreferrer">
                     <h1 class="projectBtnText">View Code</h1>
-                    <image class="projectBtnImage" src="assets/images/Logos/github_logo_dark.png"></image>
+                    <image class="projectBtnImage" src="assets/images/Logos/github_logo_light.png"></image>
                 </a>
             </div>  
         </div>
@@ -116,18 +117,18 @@
             <div class="projectBtnsWrap">
                 <a class="projectBtn" href="https://brandonspangler.com/goatify" target="_blank" rel="noopener noreferrer">
                     <h1 class="projectBtnText">Website</h1>
-                    <image class="projectBtnImage" src="assets/images/Icons/open_in_new.png"></image>
+                    <image class="projectBtnImage" src="assets/images/Icons/open_in_new_light.png"></image>
                 </a>
                 <a class="projectBtn" href="https://github.com/brandonspangler2/goatify" target="_blank" rel="noopener noreferrer">
                     <h1 class="projectBtnText">View Code</h1>
-                    <image class="projectBtnImage" src="assets/images/Logos/github_logo_dark.png"></image>
+                    <image class="projectBtnImage" src="assets/images/Logos/github_logo_light.png"></image>
                 </a>
             </div>  
         </div>
 
-        <div class="projectLibraryWrapper">
+        <!-- <div class="projectLibraryWrapper">
             <a class="toProjectLibraryHeader" href="projectLibrary.html">Project Library</a>
-        </div>
+        </div> -->
 
     </section>
 
