@@ -5,12 +5,12 @@
 
 .footer {
     grid-area: footer;
-    background-color: #212529;
+    /* background-color: #212529; */
     color: #CED4DA;
     width: 100%;
     padding: 1rem 0 0 0;
     /* box-shadow: 0 -2px 4px #A9D5F2; */
-    border-top: 1px solid #F8F9FA;
+    /* border-top: 1px solid #F8F9FA; */
     /* font-family: 'Raleway', sans-serif; */
     font-family: 'Inter', sans-serif;
     /* font-weight: 300; */
@@ -60,7 +60,7 @@
 }
 
 .footerBottom {
-    background-color: black;
+    /* background-color: black; */
     display: flex;
     justify-content: space-between;
     padding: 0 4rem;

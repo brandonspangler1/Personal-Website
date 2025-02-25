@@ -21,49 +21,51 @@
     <script src="scripts/header.js"></script>
     <!-- <script src="scripts/footer.js"></script> -->
 </head>
-<body class="grid_wrap">
+<body class="grid_wrap" id="top">
     <header class="navi header" id="header">
         <div class="headerInfo" id="headerInfo">
-            <button class="headerName" id="headerName" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Brandon Spangler</button>
+            <button class="headerName" id="headerName" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#top'})">Brandon Spangler</button>
         </div>
 
-        <!-- <button class="headerNameMobile" id="headerNameMobile" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})">Brandon Spangler</button> -->
-            <button class="headerNameMobile" id="headerNameMobile" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})"><img class="personalPic" src="/assets/images/Profile_Picture.jpg"/></button>
+        <button class="headerNameMobile" id="headerNameMobile" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'})"><img class="personalPic" src="/assets/images/Profile_Picture.jpg"/></button>
 
-            <div class="btn_wrap" id="btn_wrap">
-                <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#projects', offsetY: headerHeight}})">Projects</button>
-                <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#about', offsetY: headerHeight}})">About</button>
-                <button class="headerBtns rightMostHeaderBtn" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#footer'}})">Contact</button>
-            </div> 
-        
-            <div class="menuButton" id="menuButton" onClick="menuTransform(menuButton)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-            </div>
+        <div class="btn_wrap" id="btn_wrap">
+            <button class="headerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#projects', offsetY: headerHeight}})">Projects</button>
+            <button class="headerBtns rightMostHeaderBtn" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#about', offsetY: headerHeight}})">About</button>
+            <!-- <button class="headerBtns rightMostHeaderBtn" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#footer'}})">Contact</button> -->
+        </div> 
+    
+        <div class="menuButton" id="menuButton" onClick="menuTransform(menuButton)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+        </div>
 
-            <div class="hamburgerMenuWrapper" id="hamburgerMenuWrapper">
-                <div class="hamburgerMenu" id="hamburgerMenu">
-                    <button class="hamburgerBtns" id="firstHamburgerButton" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'}), menuTransform(menuButton)">Home</button>
-                    <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#projects'}), menuTransform(menuButton)">Projects</button>
-                    <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#about', offsetY: 0}}), menuTransform(menuButton)">About Me</button>
-                    <a class="hamburgerBtns" href="assets/Resume.pdf">Resume</a>
-                    <a class="hamburgerBtns" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">LinkedIn</a>
-                    <a class="hamburgerBtns" href="https://github.com/brandonspangler2">GitHub</a>
-                </div>
+        <div class="hamburgerMenuWrapper" id="hamburgerMenuWrapper">
+            <div class="hamburgerMenu" id="hamburgerMenu">
+                <button class="hamburgerBtns" id="firstHamburgerButton" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#home'}), menuTransform(menuButton)">Home</button>
+                <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: '#projects'}), menuTransform(menuButton)">Projects</button>
+                <button class="hamburgerBtns" onClick="gsap.to(window, {duration: 0.75, scrollTo: {y: '#about', offsetY: 0}}), menuTransform(menuButton)">About Me</button>
+                <a class="hamburgerBtns" href="assets/Resume.pdf">Resume</a>
+                <a class="hamburgerBtns" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">LinkedIn</a>
+                <a class="hamburgerBtns" href="https://github.com/brandonspangler1">GitHub</a>
             </div>
+        </div>
     </header>
 
     <section class="main" id="home">
-        <h1 class="welcomeTitle"><span class="orange">Hello</span>, I'm Brandon</h1>
+        <div class="welcomeTextWrapper">
+            <h1 class="welcomeTitle"><span class="orange">Hi</span>, <br> I'm Brandon</h1>
 
-        <h2 class="welcomeBuzz">
-            Systems Engineer, Developer <br> University of Central Florida Computer Science Graduate
-        </h2> 
+            <h2 class="welcomeBuzz">
+                <!-- Computer Scientist <br> Bachelor's at University of Central Florida  -->
+                I am a computer scientist and <br> University of Central Florida Graduate.
+            </h2> 
+        </div>
 
         <div class="welcomeBtnWrapper">
             <a class="resumeBtn" href="assets/Resume.pdf">Resume</a>
             <a class="resumeBtn" href="https://www.linkedin.com/in/brandon-spangler-0680291a0/">LinkedIn</a>
-            <a class="resumeBtn" href="https://github.com/brandonspangler2">GitHub</a>
+            <a class="resumeBtn" href="https://github.com/brandonspangler1">GitHub</a>
         </div>        
     </section>
 
@@ -147,14 +149,13 @@
                 I am a computer science student from the University of Central Florida with proven teamwork and problem-solving skills. 
                 I also have a minor in mathematics, showcasing my logical and critical thinking skills. 
                 I interned at Kellogg Supply Company, implementing a Warehouse Management System. 
-                I am seeking an entry-level software engineer position to help expand my skill set. 
                 Please reach out to brandons0207@gmail.com.
             </p>
         </div>
     </section>
 
     <footer class="footer" id="footer">
-        <div class="contactMeWrapper">
+        <!-- <div class="contactMeWrapper">
             <div>
                 <h1 class="contactMeHeader">Contact me</h1>
                 <form action="form.php" method="POST" class="contactForm" id="contactForm">
@@ -198,9 +199,9 @@
                         src="assets/images/Icons/download_icon_white.png">
                 </a>
             </div>
-        </div>
+        </div> -->
         <div class="footerBottom">
-            <h1 class="copyright">© 2023 Brandon Spangler</h1>
+            <h1 class="copyright">© 2024 Brandon Spangler</h1>
             <a class="websiteCode" href="https://github.com/brandonspangler2/Personal-Website">Website Source Code</a>
         </div>
     </footer>

@@ -19,6 +19,12 @@ Colors:
     - Outer space - #495057
     - French Grey - #CED4DA
     - Sea salt - #F8F9FA
+
+    New Colors:
+     #222831
+     #393E46
+     #00ADB5
+     #EEEEEE
 */
 
 /* || General Styles */
@@ -33,6 +39,17 @@ Colors:
     src: url("/assets/fonts/Inter/Inter_Variable.ttf") format("truetype");
 }
 
+@font-face{
+    font-family: "Bitter";
+    src: url("/assets/fonts/Bitter/Bitter-VariableFont_wght.ttf") format("truetype");
+}
+
+:root{
+    --background: #222831;
+    --mainBorderColor: #1A1F26;
+    --mainFontColor: #CED4DA;
+}
+
 html {
     box-sizing: border-box;
     overflow-x: hidden;
@@ -44,16 +61,14 @@ html {
 }
 
 body {
-    background: #98C1D9; 
-    background: #212529;
-    color: #293241;
-    color: #CED4DA;
+    background: var(--background);
+    border: 1.25rem solid var(--mainBorderColor);
+    color: var(--mainFontColor);
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     overflow-x: hidden;
-    
 }
 
 body::-webkit-scrollbar {
@@ -92,14 +107,18 @@ button, .menuButton {
     height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     padding: 0 4rem;
 }
 
-.intro {
+.welcomeTextWrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 75%;
+    justify-content: center;
+    /* align-items: left; */
+
 }
 
 .welcomeSections {
@@ -107,9 +126,9 @@ button, .menuButton {
 }
 
 .welcomeTitle {
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    text-align: left;
+    font-family: 'Bitter', serif;
+    font-weight: 300;
     font-size: 6rem;
     margin: 0;
 }
@@ -117,21 +136,24 @@ button, .menuButton {
 .orange {
     color: #FB8122;
     color: #EF4F1F;
+    /* color: #00ADB5; */
     /* color: #EE6C4D; */
 }
 
 .welcomeBuzz {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Bitter', serif;
     font-weight: 300;
     font-size: 2.75rem;
-    text-align: center;
+    text-align: left;
 }
 
 .welcomeBtnWrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     margin: 2rem 0;
+    width: 25%;
 }
 
 .projectBtnColumn {
@@ -152,12 +174,9 @@ button, .menuButton {
     padding: 10px 20px;
     /* width: min-content; */
     margin: 10px 2rem;
-    /* opacity: 0.75; */
-    border: 0.25rem solid #738290;
-    border: 0.25rem solid #F5865C;
-    border: 0.25rem solid #EF4F1F;
-    border: 0.2rem solid #293241; 
     border: 0.2rem solid #495057;
+    width: 75%;
+    text-align: center;
 }
 
 .resumeBtn:hover {
@@ -376,7 +395,7 @@ button, .menuButton {
 .profilePicture {
     height: 18rem;
     width: 18rem;
-    border: 0.15rem solid #495057;
+    border: 0.15rem solid #EEEEEE;
     border-radius: 0.1rem;
     margin: 30px;
 }
@@ -395,12 +414,16 @@ button, .menuButton {
     .main {
         justify-content: center;
         padding: 0 2rem;
+        flex-direction: column;
     }
     .proj {
         padding: 0 2rem;
     }
     .about {
         padding: 0 2rem;
+    }
+    .welcomeTextWrapper{
+        width: auto;
     }
     .welcomeTitleWrapper{
         margin-top: 10vw;
@@ -414,6 +437,9 @@ button, .menuButton {
     }
     .welcomeBtnWrapper {
         flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        width: auto;
     }
     .profilePicture {
         height: 15rem;
